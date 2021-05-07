@@ -1,0 +1,1249 @@
+C:\Users\lenovo>cd downloads
+
+C:\Users\lenovo\Downloads>ssh -i devopssystemkey.pem ec2-user@99.79.57.107
+The authenticity of host '99.79.57.107 (99.79.57.107)' can't be established.
+ECDSA key fingerprint is SHA256:tCCj6l1dM/UZRsuFFU4fEhlvkPlJG8ti90hYf3H/rCY.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '99.79.57.107' (ECDSA) to the list of known hosts.
+Last login: Fri Apr 23 03:44:33 2021 from 38.26.23.87
+Last login: Fri Apr 23 03:44:33 2021 from 38.26.23.87
+[ec2-user@ip-172-31-0-58 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-0-58 ~]$ etc
+-bash: etc: command not found
+[ec2-user@ip-172-31-0-58 ~]$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs          386972       0    386972   0% /dev
+tmpfs             412576       0    412576   0% /dev/shm
+tmpfs             412576   10700    401876   3% /run
+tmpfs             412576       0    412576   0% /sys/fs/cgroup
+/dev/xvda2      10473452 1139396   9334056  11% /
+tmpfs              82512       0     82512   0% /run/user/1000
+[ec2-user@ip-172-31-0-58 ~]$ ls -la
+total 12
+drwx------. 3 ec2-user ec2-user  74 Apr 23 03:44 .
+drwxr-xr-x. 3 root     root      22 Apr 23 03:44 ..
+-rw-r--r--. 1 ec2-user ec2-user  18 Jun 23  2020 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user 141 Jun 23  2020 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user 376 Jun 23  2020 .bashrc
+drwx------. 2 ec2-user ec2-user  29 Apr 23 03:44 .ssh
+[ec2-user@ip-172-31-0-58 ~]$ cat /etc/redhat-release
+Red Hat Enterprise Linux release 8.3 (Ootpa)
+[ec2-user@ip-172-31-0-58 ~]$ yum update
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[ec2-user@ip-172-31-0-58 ~]$ yum update
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[ec2-user@ip-172-31-0-58 ~]$ exit
+logout
+Connection to 99.79.57.107 closed.
+
+C:\Users\lenovo\Downloads>ssh -i devopssystemkey.pem root@99.79.57.107
+Please login as the user "ec2-user" rather than the user "root".
+
+
+exiConnection to 99.79.57.107 closed.
+
+C:\Users\lenovo\Downloads>ssh -i devopssystemkey.pem ec2-user@99.79.57.107
+Last login: Fri Apr 30 02:34:30 2021 from 38.26.23.87
+[ec2-user@ip-172-31-0-58 ~]$ yum update
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[ec2-user@ip-172-31-0-58 ~]$ su
+Password:
+su: Authentication failure
+[ec2-user@ip-172-31-0-58 ~]$ sudo -i
+[root@ip-172-31-0-58 ~]# yum install git
+Last metadata expiration check: 0:44:19 ago on Fri 30 Apr 2021 02:41:25 AM UTC.
+Dependencies resolved.
+======================================================================================================================== Package                    Arch       Version                                     Repository                      Size
+========================================================================================================================Installing:
+ git                        x86_64     2.27.0-1.el8                                rhel-8-appstream-rhui-rpms     164 k
+Installing dependencies:
+ emacs-filesystem           noarch     1:26.1-5.el8                                rhel-8-baseos-rhui-rpms         69 k
+ git-core                   x86_64     2.27.0-1.el8                                rhel-8-appstream-rhui-rpms     5.7 M
+ git-core-doc               noarch     2.27.0-1.el8                                rhel-8-appstream-rhui-rpms     2.5 M
+ perl-Carp                  noarch     1.42-396.el8                                rhel-8-baseos-rhui-rpms         30 k
+ perl-Data-Dumper           x86_64     2.167-399.el8                               rhel-8-baseos-rhui-rpms         58 k
+ perl-Digest                noarch     1.17-395.el8                                rhel-8-appstream-rhui-rpms      27 k
+ perl-Digest-MD5            x86_64     2.55-396.el8                                rhel-8-appstream-rhui-rpms      37 k
+ perl-Encode                x86_64     4:2.97-3.el8                                rhel-8-baseos-rhui-rpms        1.5 M
+ perl-Errno                 x86_64     1.28-417.el8_3                              rhel-8-baseos-rhui-rpms         76 k
+ perl-Error                 noarch     1:0.17025-2.el8                             rhel-8-appstream-rhui-rpms      46 k
+ perl-Exporter              noarch     5.72-396.el8                                rhel-8-baseos-rhui-rpms         34 k
+ perl-File-Path             noarch     2.15-2.el8                                  rhel-8-baseos-rhui-rpms         38 k
+ perl-File-Temp             noarch     0.230.600-1.el8                             rhel-8-baseos-rhui-rpms         63 k
+ perl-Getopt-Long           noarch     1:2.50-4.el8                                rhel-8-baseos-rhui-rpms         63 k
+ perl-Git                   noarch     2.27.0-1.el8                                rhel-8-appstream-rhui-rpms      78 k
+ perl-HTTP-Tiny             noarch     0.074-1.el8                                 rhel-8-baseos-rhui-rpms         58 k
+ perl-IO                    x86_64     1.38-417.el8_3                              rhel-8-baseos-rhui-rpms        142 k
+ perl-MIME-Base64           x86_64     3.15-396.el8                                rhel-8-baseos-rhui-rpms         31 k
+ perl-Net-SSLeay            x86_64     1.88-1.module+el8.3.0+6446+594cad75         rhel-8-appstream-rhui-rpms     379 k
+ perl-PathTools             x86_64     3.74-1.el8                                  rhel-8-baseos-rhui-rpms         90 k
+ perl-Pod-Escapes           noarch     1:1.07-395.el8                              rhel-8-baseos-rhui-rpms         20 k
+ perl-Pod-Perldoc           noarch     3.28-396.el8                                rhel-8-baseos-rhui-rpms         88 k
+ perl-Pod-Simple            noarch     1:3.35-395.el8                              rhel-8-baseos-rhui-rpms        213 k
+ perl-Pod-Usage             noarch     4:1.69-395.el8                              rhel-8-baseos-rhui-rpms         34 k
+ perl-Scalar-List-Utils     x86_64     3:1.49-2.el8                                rhel-8-baseos-rhui-rpms         68 k
+ perl-Socket                x86_64     4:2.027-3.el8                               rhel-8-baseos-rhui-rpms         59 k
+ perl-Storable              x86_64     1:3.11-3.el8                                rhel-8-baseos-rhui-rpms         98 k
+ perl-Term-ANSIColor        noarch     4.06-396.el8                                rhel-8-baseos-rhui-rpms         46 k
+ perl-Term-Cap              noarch     1.17-395.el8                                rhel-8-baseos-rhui-rpms         23 k
+ perl-TermReadKey           x86_64     2.37-7.el8                                  rhel-8-appstream-rhui-rpms      40 k
+ perl-Text-ParseWords       noarch     3.30-395.el8                                rhel-8-baseos-rhui-rpms         18 k
+ perl-Text-Tabs+Wrap        noarch     2013.0523-395.el8                           rhel-8-baseos-rhui-rpms         24 k
+ perl-Time-Local            noarch     1:1.280-1.el8                               rhel-8-baseos-rhui-rpms         34 k
+ perl-URI                   noarch     1.73-3.el8                                  rhel-8-appstream-rhui-rpms     116 k
+ perl-Unicode-Normalize     x86_64     1.25-396.el8                                rhel-8-baseos-rhui-rpms         82 k
+ perl-constant              noarch     1.33-396.el8                                rhel-8-baseos-rhui-rpms         25 k
+ perl-interpreter           x86_64     4:5.26.3-417.el8_3                          rhel-8-baseos-rhui-rpms        6.3 M
+ perl-libnet                noarch     3.11-3.el8                                  rhel-8-appstream-rhui-rpms     121 k
+ perl-libs                  x86_64     4:5.26.3-417.el8_3                          rhel-8-baseos-rhui-rpms        1.6 M
+ perl-macros                x86_64     4:5.26.3-417.el8_3                          rhel-8-baseos-rhui-rpms         72 k
+ perl-parent                noarch     1:0.237-1.el8                               rhel-8-baseos-rhui-rpms         20 k
+ perl-podlators             noarch     4.11-1.el8                                  rhel-8-baseos-rhui-rpms        118 k
+ perl-threads               x86_64     1:2.21-2.el8                                rhel-8-baseos-rhui-rpms         61 k
+ perl-threads-shared        x86_64     1.58-2.el8                                  rhel-8-baseos-rhui-rpms         48 k
+Installing weak dependencies:
+ perl-IO-Socket-IP          noarch     0.39-5.el8                                  rhel-8-appstream-rhui-rpms      47 k
+ perl-IO-Socket-SSL         noarch     2.066-4.module+el8.3.0+6446+594cad75        rhel-8-appstream-rhui-rpms     298 k
+ perl-Mozilla-CA            noarch     20160104-7.module+el8.3.0+6498+9eecfe51     rhel-8-appstream-rhui-rpms      15 k
+Enabling module streams:
+ perl                                  5.26
+ perl-IO-Socket-SSL                    2.066
+ perl-libwww-perl                      6.34
+
+Transaction Summary
+========================================================================================================================Install  48 Packages
+
+Total download size: 21 M
+Installed size: 80 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/48): perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch.rpm                                                                  124 kB/s |  15 kB     00:00
+(2/48): perl-IO-Socket-IP-0.39-5.el8.noarch.rpm                                                                                             367 kB/s |  47 kB     00:00
+(3/48): perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch.rpm                                                                  2.1 MB/s | 298 kB     00:00
+(4/48): perl-Digest-1.17-395.el8.noarch.rpm                                                                                                 298 kB/s |  27 kB     00:00
+(5/48): git-core-doc-2.27.0-1.el8.noarch.rpm                                                                                                 19 MB/s | 2.5 MB     00:00
+(6/48): perl-URI-1.73-3.el8.noarch.rpm                                                                                                      1.2 MB/s | 116 kB     00:00
+(7/48): git-core-2.27.0-1.el8.x86_64.rpm                                                                                                     30 MB/s | 5.7 MB     00:00
+(8/48): perl-Error-0.17025-2.el8.noarch.rpm                                                                                                 511 kB/s |  46 kB     00:00
+(9/48): perl-Digest-MD5-2.55-396.el8.x86_64.rpm                                                                                             345 kB/s |  37 kB     00:00
+(10/48): perl-libnet-3.11-3.el8.noarch.rpm                                                                                                  1.2 MB/s | 121 kB     00:00
+(11/48): perl-Git-2.27.0-1.el8.noarch.rpm                                                                                                   862 kB/s |  78 kB     00:00
+(12/48): git-2.27.0-1.el8.x86_64.rpm                                                                                                        1.7 MB/s | 164 kB     00:00
+(13/48): perl-Net-SSLeay-1.88-1.module+el8.3.0+6446+594cad75.x86_64.rpm                                                                     3.6 MB/s | 379 kB     00:00
+(14/48): perl-TermReadKey-2.37-7.el8.x86_64.rpm                                                                                             411 kB/s |  40 kB     00:00
+(15/48): perl-HTTP-Tiny-0.074-1.el8.noarch.rpm                                                                                              646 kB/s |  58 kB     00:00
+(16/48): perl-Text-ParseWords-3.30-395.el8.noarch.rpm                                                                                       199 kB/s |  18 kB     00:00
+(17/48): perl-Pod-Escapes-1.07-395.el8.noarch.rpm                                                                                           210 kB/s |  20 kB     00:00
+(18/48): perl-Term-Cap-1.17-395.el8.noarch.rpm                                                                                              253 kB/s |  23 kB     00:00
+(19/48): perl-Exporter-5.72-396.el8.noarch.rpm                                                                                              379 kB/s |  34 kB     00:00
+(20/48): perl-Encode-2.97-3.el8.x86_64.rpm                                                                                                   13 MB/s | 1.5 MB     00:00
+(21/48): perl-threads-2.21-2.el8.x86_64.rpm                                                                                                 694 kB/s |  61 kB     00:00
+(22/48): perl-File-Temp-0.230.600-1.el8.noarch.rpm                                                                                          649 kB/s |  63 kB     00:00
+(23/48): perl-File-Path-2.15-2.el8.noarch.rpm                                                                                               407 kB/s |  38 kB     00:00
+(24/48): perl-Pod-Usage-1.69-395.el8.noarch.rpm                                                                                             379 kB/s |  34 kB     00:00
+(25/48): perl-Scalar-List-Utils-1.49-2.el8.x86_64.rpm                                                                                       770 kB/s |  68 kB     00:00
+(26/48): perl-Carp-1.42-396.el8.noarch.rpm                                                                                                  335 kB/s |  30 kB     00:00
+(27/48): perl-Pod-Perldoc-3.28-396.el8.noarch.rpm                                                                                           962 kB/s |  88 kB     00:00
+(28/48): perl-PathTools-3.74-1.el8.x86_64.rpm                                                                                               884 kB/s |  90 kB     00:00
+(29/48): perl-parent-0.237-1.el8.noarch.rpm                                                                                                 219 kB/s |  20 kB     00:00
+(30/48): perl-threads-shared-1.58-2.el8.x86_64.rpm                                                                                          475 kB/s |  48 kB     00:00
+(31/48): perl-MIME-Base64-3.15-396.el8.x86_64.rpm                                                                                           335 kB/s |  31 kB     00:00
+(32/48): perl-Getopt-Long-2.50-4.el8.noarch.rpm                                                                                             677 kB/s |  63 kB     00:00
+(33/48): perl-Unicode-Normalize-1.25-396.el8.x86_64.rpm                                                                                     937 kB/s |  82 kB     00:00
+(34/48): perl-Data-Dumper-2.167-399.el8.x86_64.rpm                                                                                          672 kB/s |  58 kB     00:00
+(35/48): perl-podlators-4.11-1.el8.noarch.rpm                                                                                               1.2 MB/s | 118 kB     00:00
+(36/48): perl-Storable-3.11-3.el8.x86_64.rpm                                                                                                1.1 MB/s |  98 kB     00:00
+(37/48): perl-constant-1.33-396.el8.noarch.rpm                                                                                              266 kB/s |  25 kB     00:00
+(38/48): emacs-filesystem-26.1-5.el8.noarch.rpm                                                                                             700 kB/s |  69 kB     00:00
+(39/48): perl-Time-Local-1.280-1.el8.noarch.rpm                                                                                             387 kB/s |  34 kB     00:00
+(40/48): perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch.rpm                                                                                   276 kB/s |  24 kB     00:00
+(41/48): perl-Term-ANSIColor-4.06-396.el8.noarch.rpm                                                                                        529 kB/s |  46 kB     00:00
+(42/48): perl-Pod-Simple-3.35-395.el8.noarch.rpm                                                                                            2.3 MB/s | 213 kB     00:00
+(43/48): perl-Socket-2.027-3.el8.x86_64.rpm                                                                                                 668 kB/s |  59 kB     00:00
+(44/48): perl-macros-5.26.3-417.el8_3.x86_64.rpm                                                                                            799 kB/s |  72 kB     00:00
+(45/48): perl-libs-5.26.3-417.el8_3.x86_64.rpm                                                                                               13 MB/s | 1.6 MB     00:00
+(46/48): perl-Errno-1.28-417.el8_3.x86_64.rpm                                                                                               829 kB/s |  76 kB     00:00
+(47/48): perl-IO-1.38-417.el8_3.x86_64.rpm                                                                                                  1.4 MB/s | 142 kB     00:00
+(48/48): perl-interpreter-5.26.3-417.el8_3.x86_64.rpm                                                                                        37 MB/s | 6.3 MB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                        12 MB/s |  21 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                    1/1
+  Installing       : perl-Carp-1.42-396.el8.noarch                                                                                                                     1/48
+  Installing       : perl-libs-4:5.26.3-417.el8_3.x86_64                                                                                                               2/48
+  Installing       : perl-Exporter-5.72-396.el8.noarch                                                                                                                 3/48
+  Installing       : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                                                                                        4/48
+  Installing       : perl-parent-1:0.237-1.el8.noarch                                                                                                                  5/48
+  Installing       : perl-Text-ParseWords-3.30-395.el8.noarch                                                                                                          6/48
+  Installing       : git-core-2.27.0-1.el8.x86_64                                                                                                                      7/48
+  Installing       : git-core-doc-2.27.0-1.el8.noarch                                                                                                                  8/48
+  Installing       : perl-Term-ANSIColor-4.06-396.el8.noarch                                                                                                           9/48
+  Installing       : perl-macros-4:5.26.3-417.el8_3.x86_64                                                                                                            10/48
+  Installing       : perl-threads-shared-1.58-2.el8.x86_64                                                                                                            11/48
+  Installing       : perl-threads-1:2.21-2.el8.x86_64                                                                                                                 12/48
+  Installing       : perl-Unicode-Normalize-1.25-396.el8.x86_64                                                                                                       13/48
+  Installing       : perl-constant-1.33-396.el8.noarch                                                                                                                14/48
+  Installing       : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                                                                                     15/48
+  Installing       : perl-Socket-4:2.027-3.el8.x86_64                                                                                                                 16/48
+  Installing       : perl-File-Path-2.15-2.el8.noarch                                                                                                                 17/48
+  Installing       : perl-PathTools-3.74-1.el8.x86_64                                                                                                                 18/48
+  Installing       : perl-Errno-1.28-417.el8_3.x86_64                                                                                                                 19/48
+  Installing       : perl-IO-1.38-417.el8_3.x86_64                                                                                                                    20/48
+  Installing       : perl-interpreter-4:5.26.3-417.el8_3.x86_64                                                                                                       21/48
+  Installing       : perl-MIME-Base64-3.15-396.el8.x86_64                                                                                                             22/48
+  Installing       : perl-IO-Socket-IP-0.39-5.el8.noarch                                                                                                              23/48
+  Installing       : perl-Time-Local-1:1.280-1.el8.noarch                                                                                                             24/48
+  Installing       : perl-File-Temp-0.230.600-1.el8.noarch                                                                                                            25/48
+  Installing       : perl-Digest-1.17-395.el8.noarch                                                                                                                  26/48
+  Installing       : perl-Digest-MD5-2.55-396.el8.x86_64                                                                                                              27/48
+  Installing       : perl-Net-SSLeay-1.88-1.module+el8.3.0+6446+594cad75.x86_64                                                                                       28/48
+  Installing       : perl-Error-1:0.17025-2.el8.noarch                                                                                                                29/48
+  Installing       : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                               30/48
+  Installing       : perl-Pod-Escapes-1:1.07-395.el8.noarch                                                                                                           31/48
+  Installing       : perl-Term-Cap-1.17-395.el8.noarch                                                                                                                32/48
+  Installing       : perl-Data-Dumper-2.167-399.el8.x86_64                                                                                                            33/48
+  Installing       : perl-Storable-1:3.11-3.el8.x86_64                                                                                                                34/48
+  Installing       : perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch                                                                                   35/48
+  Installing       : perl-libnet-3.11-3.el8.noarch                                                                                                                    36/48
+  Installing       : perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch                                                                                   37/48
+  Installing       : perl-HTTP-Tiny-0.074-1.el8.noarch                                                                                                                38/48
+  Installing       : perl-URI-1.73-3.el8.noarch                                                                                                                       39/48
+  Installing       : perl-Encode-4:2.97-3.el8.x86_64                                                                                                                  40/48
+  Installing       : perl-Pod-Simple-1:3.35-395.el8.noarch                                                                                                            41/48
+  Installing       : perl-Getopt-Long-1:2.50-4.el8.noarch                                                                                                             42/48
+  Installing       : perl-podlators-4.11-1.el8.noarch                                                                                                                 43/48
+  Installing       : perl-Pod-Perldoc-3.28-396.el8.noarch                                                                                                             44/48
+  Installing       : perl-Pod-Usage-4:1.69-395.el8.noarch                                                                                                             45/48
+  Installing       : emacs-filesystem-1:26.1-5.el8.noarch                                                                                                             46/48
+  Installing       : perl-Git-2.27.0-1.el8.noarch                                                                                                                     47/48
+  Installing       : git-2.27.0-1.el8.x86_64                                                                                                                          48/48
+  Running scriptlet: git-2.27.0-1.el8.x86_64                                                                                                                          48/48
+  Verifying        : perl-IO-Socket-IP-0.39-5.el8.noarch                                                                                                               1/48
+  Verifying        : perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch                                                                                    2/48
+  Verifying        : perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch                                                                                    3/48
+  Verifying        : perl-Digest-1.17-395.el8.noarch                                                                                                                   4/48
+  Verifying        : git-core-doc-2.27.0-1.el8.noarch                                                                                                                  5/48
+  Verifying        : git-core-2.27.0-1.el8.x86_64                                                                                                                      6/48
+  Verifying        : perl-URI-1.73-3.el8.noarch                                                                                                                        7/48
+  Verifying        : perl-Error-1:0.17025-2.el8.noarch                                                                                                                 8/48
+  Verifying        : perl-Digest-MD5-2.55-396.el8.x86_64                                                                                                               9/48
+  Verifying        : perl-libnet-3.11-3.el8.noarch                                                                                                                    10/48
+  Verifying        : perl-Git-2.27.0-1.el8.noarch                                                                                                                     11/48
+  Verifying        : git-2.27.0-1.el8.x86_64                                                                                                                          12/48
+  Verifying        : perl-Net-SSLeay-1.88-1.module+el8.3.0+6446+594cad75.x86_64                                                                                       13/48
+  Verifying        : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                               14/48
+  Verifying        : perl-HTTP-Tiny-0.074-1.el8.noarch                                                                                                                15/48
+  Verifying        : perl-Text-ParseWords-3.30-395.el8.noarch                                                                                                         16/48
+  Verifying        : perl-Pod-Escapes-1:1.07-395.el8.noarch                                                                                                           17/48
+  Verifying        : perl-Term-Cap-1.17-395.el8.noarch                                                                                                                18/48
+  Verifying        : perl-Encode-4:2.97-3.el8.x86_64                                                                                                                  19/48
+  Verifying        : perl-Exporter-5.72-396.el8.noarch                                                                                                                20/48
+  Verifying        : perl-threads-1:2.21-2.el8.x86_64                                                                                                                 21/48
+  Verifying        : perl-File-Temp-0.230.600-1.el8.noarch                                                                                                            22/48
+  Verifying        : perl-File-Path-2.15-2.el8.noarch                                                                                                                 23/48
+  Verifying        : perl-Pod-Usage-4:1.69-395.el8.noarch                                                                                                             24/48
+  Verifying        : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                                                                                       25/48
+  Verifying        : perl-Carp-1.42-396.el8.noarch                                                                                                                    26/48
+  Verifying        : perl-Pod-Perldoc-3.28-396.el8.noarch                                                                                                             27/48
+  Verifying        : perl-PathTools-3.74-1.el8.x86_64                                                                                                                 28/48
+  Verifying        : perl-parent-1:0.237-1.el8.noarch                                                                                                                 29/48
+  Verifying        : perl-threads-shared-1.58-2.el8.x86_64                                                                                                            30/48
+  Verifying        : perl-MIME-Base64-3.15-396.el8.x86_64                                                                                                             31/48
+  Verifying        : perl-Getopt-Long-1:2.50-4.el8.noarch                                                                                                             32/48
+  Verifying        : perl-Unicode-Normalize-1.25-396.el8.x86_64                                                                                                       33/48
+  Verifying        : perl-Data-Dumper-2.167-399.el8.x86_64                                                                                                            34/48
+  Verifying        : perl-podlators-4.11-1.el8.noarch                                                                                                                 35/48
+  Verifying        : perl-Storable-1:3.11-3.el8.x86_64                                                                                                                36/48
+  Verifying        : perl-constant-1.33-396.el8.noarch                                                                                                                37/48
+  Verifying        : emacs-filesystem-1:26.1-5.el8.noarch                                                                                                             38/48
+  Verifying        : perl-Time-Local-1:1.280-1.el8.noarch                                                                                                             39/48
+  Verifying        : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                                                                                     40/48
+  Verifying        : perl-Term-ANSIColor-4.06-396.el8.noarch                                                                                                          41/48
+  Verifying        : perl-Pod-Simple-1:3.35-395.el8.noarch                                                                                                            42/48
+  Verifying        : perl-Socket-4:2.027-3.el8.x86_64                                                                                                                 43/48
+  Verifying        : perl-macros-4:5.26.3-417.el8_3.x86_64                                                                                                            44/48
+  Verifying        : perl-libs-4:5.26.3-417.el8_3.x86_64                                                                                                              45/48
+  Verifying        : perl-Errno-1.28-417.el8_3.x86_64                                                                                                                 46/48
+  Verifying        : perl-IO-1.38-417.el8_3.x86_64                                                                                                                    47/48
+  Verifying        : perl-interpreter-4:5.26.3-417.el8_3.x86_64                                                                                                       48/48
+
+Installed:
+  emacs-filesystem-1:26.1-5.el8.noarch                                               git-2.27.0-1.el8.x86_64
+  git-core-2.27.0-1.el8.x86_64                                                       git-core-doc-2.27.0-1.el8.noarch
+  perl-Carp-1.42-396.el8.noarch                                                      perl-Data-Dumper-2.167-399.el8.x86_64
+  perl-Digest-1.17-395.el8.noarch                                                    perl-Digest-MD5-2.55-396.el8.x86_64
+  perl-Encode-4:2.97-3.el8.x86_64                                                    perl-Errno-1.28-417.el8_3.x86_64
+  perl-Error-1:0.17025-2.el8.noarch                                                  perl-Exporter-5.72-396.el8.noarch
+  perl-File-Path-2.15-2.el8.noarch                                                   perl-File-Temp-0.230.600-1.el8.noarch
+  perl-Getopt-Long-1:2.50-4.el8.noarch                                               perl-Git-2.27.0-1.el8.noarch
+  perl-HTTP-Tiny-0.074-1.el8.noarch                                                  perl-IO-1.38-417.el8_3.x86_64
+  perl-IO-Socket-IP-0.39-5.el8.noarch                                                perl-IO-Socket-SSL-2.066-4.module+el8.3.0+6446+594cad75.noarch
+  perl-MIME-Base64-3.15-396.el8.x86_64                                               perl-Mozilla-CA-20160104-7.module+el8.3.0+6498+9eecfe51.noarch
+  perl-Net-SSLeay-1.88-1.module+el8.3.0+6446+594cad75.x86_64                         perl-PathTools-3.74-1.el8.x86_64
+  perl-Pod-Escapes-1:1.07-395.el8.noarch                                             perl-Pod-Perldoc-3.28-396.el8.noarch
+  perl-Pod-Simple-1:3.35-395.el8.noarch                                              perl-Pod-Usage-4:1.69-395.el8.noarch
+  perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                         perl-Socket-4:2.027-3.el8.x86_64
+  perl-Storable-1:3.11-3.el8.x86_64                                                  perl-Term-ANSIColor-4.06-396.el8.noarch
+  perl-Term-Cap-1.17-395.el8.noarch                                                  perl-TermReadKey-2.37-7.el8.x86_64
+  perl-Text-ParseWords-3.30-395.el8.noarch                                           perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch
+  perl-Time-Local-1:1.280-1.el8.noarch                                               perl-URI-1.73-3.el8.noarch
+  perl-Unicode-Normalize-1.25-396.el8.x86_64                                         perl-constant-1.33-396.el8.noarch
+  perl-interpreter-4:5.26.3-417.el8_3.x86_64                                         perl-libnet-3.11-3.el8.noarch
+  perl-libs-4:5.26.3-417.el8_3.x86_64                                                perl-macros-4:5.26.3-417.el8_3.x86_64
+  perl-parent-1:0.237-1.el8.noarch                                                   perl-podlators-4.11-1.el8.noarch
+  perl-threads-1:2.21-2.el8.x86_64                                                   perl-threads-shared-1.58-2.el8.x86_64
+
+Complete!
+[root@ip-172-31-0-58 ~]# git --version
+git version 2.27.0
+[root@ip-172-31-0-58 ~]# yum update
+Last metadata expiration check: 0:46:32 ago on Fri 30 Apr 2021 02:41:25 AM UTC.
+Dependencies resolved.
+============================================================================================================================================================================
+ Package                                           Architecture      Version                                                   Repository                              Size
+============================================================================================================================================================================
+Installing:
+ kernel                                            x86_64            4.18.0-240.22.1.el8_3                                     rhel-8-baseos-rhui-rpms                4.4 M
+ kernel-core                                       x86_64            4.18.0-240.22.1.el8_3                                     rhel-8-baseos-rhui-rpms                 30 M
+ kernel-modules                                    x86_64            4.18.0-240.22.1.el8_3                                     rhel-8-baseos-rhui-rpms                 26 M
+Upgrading:
+ NetworkManager                                    x86_64            1:1.26.0-14.el8_3                                         rhel-8-baseos-rhui-rpms                2.4 M
+ NetworkManager-libnm                              x86_64            1:1.26.0-14.el8_3                                         rhel-8-baseos-rhui-rpms                1.8 M
+ NetworkManager-team                               x86_64            1:1.26.0-14.el8_3                                         rhel-8-baseos-rhui-rpms                142 k
+ NetworkManager-tui                                x86_64            1:1.26.0-14.el8_3                                         rhel-8-baseos-rhui-rpms                320 k
+ bind-export-libs                                  x86_64            32:9.11.20-5.el8_3.1                                      rhel-8-baseos-rhui-rpms                1.1 M
+ cloud-init                                        noarch            19.4-11.el8_3.3                                           rhel-8-appstream-rhui-rpms             948 k
+ crypto-policies                                   noarch            20210209-1.gitbfb6bed.el8_3                               rhel-8-baseos-rhui-rpms                 62 k
+ crypto-policies-scripts                           noarch            20210209-1.gitbfb6bed.el8_3                               rhel-8-baseos-rhui-rpms                 67 k
+ curl                                              x86_64            7.61.1-14.el8_3.1                                         rhel-8-baseos-rhui-rpms                353 k
+ dbus                                              x86_64            1:1.12.8-12.el8_3                                         rhel-8-baseos-rhui-rpms                 41 k
+ dbus-common                                       noarch            1:1.12.8-12.el8_3                                         rhel-8-baseos-rhui-rpms                 45 k
+ dbus-daemon                                       x86_64            1:1.12.8-12.el8_3                                         rhel-8-baseos-rhui-rpms                240 k
+ dbus-libs                                         x86_64            1:1.12.8-12.el8_3                                         rhel-8-baseos-rhui-rpms                183 k
+ dbus-tools                                        x86_64            1:1.12.8-12.el8_3                                         rhel-8-baseos-rhui-rpms                 85 k
+ device-mapper                                     x86_64            8:1.02.171-5.el8_3.2                                      rhel-8-baseos-rhui-rpms                373 k
+ device-mapper-libs                                x86_64            8:1.02.171-5.el8_3.2                                      rhel-8-baseos-rhui-rpms                406 k
+ dnf-plugin-subscription-manager                   x86_64            1.27.18-1.el8_3                                           rhel-8-baseos-rhui-rpms                288 k
+ dracut                                            x86_64            049-95.git20200804.el8_3.4                                rhel-8-baseos-rhui-rpms                368 k
+ dracut-config-generic                             x86_64            049-95.git20200804.el8_3.4                                rhel-8-baseos-rhui-rpms                 55 k
+ dracut-config-rescue                              x86_64            049-95.git20200804.el8_3.4                                rhel-8-baseos-rhui-rpms                 56 k
+ dracut-network                                    x86_64            049-95.git20200804.el8_3.4                                rhel-8-baseos-rhui-rpms                103 k
+ dracut-squash                                     x86_64            049-95.git20200804.el8_3.4                                rhel-8-baseos-rhui-rpms                 57 k
+ file                                              x86_64            5.33-16.el8_3.1                                           rhel-8-baseos-rhui-rpms                 77 k
+ file-libs                                         x86_64            5.33-16.el8_3.1                                           rhel-8-baseos-rhui-rpms                543 k
+ freetype                                          x86_64            2.9.1-4.el8_3.1                                           rhel-8-baseos-rhui-rpms                394 k
+ glibc                                             x86_64            2.28-127.el8_3.2                                          rhel-8-baseos-rhui-rpms                3.6 M
+ glibc-common                                      x86_64            2.28-127.el8_3.2                                          rhel-8-baseos-rhui-rpms                1.3 M
+ glibc-langpack-en                                 x86_64            2.28-127.el8_3.2                                          rhel-8-baseos-rhui-rpms                824 k
+ gnutls                                            x86_64            3.6.14-8.el8_3                                            rhel-8-baseos-rhui-rpms                1.0 M
+ grub2-common                                      noarch            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                885 k
+ grub2-pc                                          x86_64            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                 39 k
+ grub2-pc-modules                                  noarch            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                868 k
+ grub2-tools                                       x86_64            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                2.0 M
+ grub2-tools-extra                                 x86_64            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                1.1 M
+ grub2-tools-minimal                               x86_64            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                206 k
+ insights-client                                   noarch            3.1.1-1.el8_3                                             rhel-8-appstream-rhui-rpms             1.0 M
+ iptables-libs                                     x86_64            1.8.4-15.el8_3.3                                          rhel-8-baseos-rhui-rpms                106 k
+ kernel-tools                                      x86_64            4.18.0-240.22.1.el8_3                                     rhel-8-baseos-rhui-rpms                4.5 M
+ kernel-tools-libs                                 x86_64            4.18.0-240.22.1.el8_3                                     rhel-8-baseos-rhui-rpms                4.4 M
+ kexec-tools                                       x86_64            2.0.20-34.el8_3.2                                         rhel-8-baseos-rhui-rpms                497 k
+ kmod                                              x86_64            25-16.el8_3.1                                             rhel-8-baseos-rhui-rpms                126 k
+ kmod-libs                                         x86_64            25-16.el8_3.1                                             rhel-8-baseos-rhui-rpms                 68 k
+ libcurl                                           x86_64            7.61.1-14.el8_3.1                                         rhel-8-baseos-rhui-rpms                299 k
+ libldb                                            x86_64            2.1.3-3.el8_3                                             rhel-8-baseos-rhui-rpms                179 k
+ microcode_ctl                                     x86_64            4:20200609-2.20210216.1.el8_3                             rhel-8-baseos-rhui-rpms                4.6 M
+ nettle                                            x86_64            3.4.1-4.el8_3                                             rhel-8-baseos-rhui-rpms                301 k
+ openssl                                           x86_64            1:1.1.1g-15.el8_3                                         rhel-8-baseos-rhui-rpms                707 k
+ openssl-libs                                      x86_64            1:1.1.1g-15.el8_3                                         rhel-8-baseos-rhui-rpms                1.5 M
+ procps-ng                                         x86_64            3.3.15-3.el8_3.1                                          rhel-8-baseos-rhui-rpms                328 k
+ python3-magic                                     noarch            5.33-16.el8_3.1                                           rhel-8-baseos-rhui-rpms                 46 k
+ python3-perf                                      x86_64            4.18.0-240.22.1.el8_3                                     rhel-8-baseos-rhui-rpms                4.5 M
+ python3-subscription-manager-rhsm                 x86_64            1.27.18-1.el8_3                                           rhel-8-baseos-rhui-rpms                362 k
+ python3-syspurpose                                x86_64            1.27.18-1.el8_3                                           rhel-8-baseos-rhui-rpms                299 k
+ qemu-guest-agent                                  x86_64            15:4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5               rhel-8-appstream-rhui-rpms             233 k
+ rh-amazon-rhui-client                             noarch            3.0.40-1.el8                                              rhui-client-config-server-8             37 k
+ selinux-policy                                    noarch            3.14.3-54.el8_3.4                                         rhel-8-baseos-rhui-rpms                622 k
+ selinux-policy-targeted                           noarch            3.14.3-54.el8_3.4                                         rhel-8-baseos-rhui-rpms                 15 M
+ subscription-manager                              x86_64            1.27.18-1.el8_3                                           rhel-8-baseos-rhui-rpms                1.1 M
+ subscription-manager-rhsm-certificates            x86_64            1.27.18-1.el8_3                                           rhel-8-baseos-rhui-rpms                262 k
+ sudo                                              x86_64            1.8.29-6.el8_3.1                                          rhel-8-baseos-rhui-rpms                924 k
+ systemd                                           x86_64            239-41.el8_3.2                                            rhel-8-baseos-rhui-rpms                3.5 M
+ systemd-libs                                      x86_64            239-41.el8_3.2                                            rhel-8-baseos-rhui-rpms                1.1 M
+ systemd-pam                                       x86_64            239-41.el8_3.2                                            rhel-8-baseos-rhui-rpms                456 k
+ systemd-udev                                      x86_64            239-41.el8_3.2                                            rhel-8-baseos-rhui-rpms                1.3 M
+ tuned                                             noarch            2.14.0-3.el8_3.2                                          rhel-8-baseos-rhui-rpms                293 k
+ tzdata                                            noarch            2021a-1.el8                                               rhel-8-baseos-rhui-rpms                473 k
+ zlib                                              x86_64            1.2.11-16.2.el8_3                                         rhel-8-baseos-rhui-rpms                102 k
+Installing dependencies:
+ grub2-tools-efi                                   x86_64            1:2.02-90.el8_3.1                                         rhel-8-baseos-rhui-rpms                471 k
+ linux-firmware                                    noarch            20200619-101.git3890db36.el8_3                            rhel-8-baseos-rhui-rpms                101 M
+
+Transaction Summary
+============================================================================================================================================================================
+Install   5 Packages
+Upgrade  67 Packages
+
+Total download size: 233 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/72): grub2-tools-efi-2.02-90.el8_3.1.x86_64.rpm                                                                                          2.6 MB/s | 471 kB     00:00
+(2/72): kernel-modules-4.18.0-240.22.1.el8_3.x86_64.rpm                                                                                      26 MB/s |  26 MB     00:00
+(3/72): kernel-core-4.18.0-240.22.1.el8_3.x86_64.rpm                                                                                         23 MB/s |  30 MB     00:01
+(4/72): rh-amazon-rhui-client-3.0.40-1.el8.noarch.rpm                                                                                       623 kB/s |  37 kB     00:00
+(5/72): kernel-4.18.0-240.22.1.el8_3.x86_64.rpm                                                                                              17 MB/s | 4.4 MB     00:00
+(6/72): insights-client-3.1.1-1.el8_3.noarch.rpm                                                                                            7.5 MB/s | 1.0 MB     00:00
+(7/72): qemu-guest-agent-4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5.x86_64.rpm                                                                2.1 MB/s | 233 kB     00:00
+(8/72): freetype-2.9.1-4.el8_3.1.x86_64.rpm                                                                                                 3.6 MB/s | 394 kB     00:00
+(9/72): cloud-init-19.4-11.el8_3.3.noarch.rpm                                                                                               7.4 MB/s | 948 kB     00:00
+(10/72): curl-7.61.1-14.el8_3.1.x86_64.rpm                                                                                                  3.1 MB/s | 353 kB     00:00
+(11/72): libcurl-7.61.1-14.el8_3.1.x86_64.rpm                                                                                               2.7 MB/s | 299 kB     00:00
+(12/72): iptables-libs-1.8.4-15.el8_3.3.x86_64.rpm                                                                                          1.0 MB/s | 106 kB     00:00
+(13/72): tzdata-2021a-1.el8.noarch.rpm                                                                                                      4.2 MB/s | 473 kB     00:00
+(14/72): dbus-tools-1.12.8-12.el8_3.x86_64.rpm                                                                                              802 kB/s |  85 kB     00:00
+(15/72): sudo-1.8.29-6.el8_3.1.x86_64.rpm                                                                                                   6.8 MB/s | 924 kB     00:00
+(16/72): linux-firmware-20200619-101.git3890db36.el8_3.noarch.rpm                                                                            43 MB/s | 101 MB     00:02
+(17/72): dracut-config-rescue-049-95.git20200804.el8_3.4.x86_64.rpm                                                                         134 kB/s |  56 kB     00:00
+(18/72): python3-subscription-manager-rhsm-1.27.18-1.el8_3.x86_64.rpm                                                                       751 kB/s | 362 kB     00:00
+(19/72): device-mapper-1.02.171-5.el8_3.2.x86_64.rpm                                                                                        3.4 MB/s | 373 kB     00:00
+(20/72): glibc-2.28-127.el8_3.2.x86_64.rpm                                                                                                   23 MB/s | 3.6 MB     00:00
+(21/72): dnf-plugin-subscription-manager-1.27.18-1.el8_3.x86_64.rpm                                                                         2.9 MB/s | 288 kB     00:00
+(22/72): dracut-config-generic-049-95.git20200804.el8_3.4.x86_64.rpm                                                                        567 kB/s |  55 kB     00:00
+(23/72): dbus-common-1.12.8-12.el8_3.noarch.rpm                                                                                             478 kB/s |  45 kB     00:00
+(24/72): tuned-2.14.0-3.el8_3.2.noarch.rpm                                                                                                  2.9 MB/s | 293 kB     00:00
+(25/72): subscription-manager-rhsm-certificates-1.27.18-1.el8_3.x86_64.rpm                                                                  2.5 MB/s | 262 kB     00:00
+(26/72): glibc-common-2.28-127.el8_3.2.x86_64.rpm                                                                                            12 MB/s | 1.3 MB     00:00
+(27/72): dbus-daemon-1.12.8-12.el8_3.x86_64.rpm                                                                                             2.3 MB/s | 240 kB     00:00
+(28/72): dbus-libs-1.12.8-12.el8_3.x86_64.rpm                                                                                               1.9 MB/s | 183 kB     00:00
+(29/72): kmod-25-16.el8_3.1.x86_64.rpm                                                                                                      1.3 MB/s | 126 kB     00:00
+(30/72): dracut-squash-049-95.git20200804.el8_3.4.x86_64.rpm                                                                                626 kB/s |  57 kB     00:00
+(31/72): dracut-049-95.git20200804.el8_3.4.x86_64.rpm                                                                                       3.7 MB/s | 368 kB     00:00
+(32/72): dbus-1.12.8-12.el8_3.x86_64.rpm                                                                                                    453 kB/s |  41 kB     00:00
+(33/72): subscription-manager-1.27.18-1.el8_3.x86_64.rpm                                                                                    9.6 MB/s | 1.1 MB     00:00
+(34/72): python3-syspurpose-1.27.18-1.el8_3.x86_64.rpm                                                                                      2.9 MB/s | 299 kB     00:00
+(35/72): kexec-tools-2.0.20-34.el8_3.2.x86_64.rpm                                                                                           4.6 MB/s | 497 kB     00:00
+(36/72): device-mapper-libs-1.02.171-5.el8_3.2.x86_64.rpm                                                                                   4.0 MB/s | 406 kB     00:00
+(37/72): dracut-network-049-95.git20200804.el8_3.4.x86_64.rpm                                                                               1.0 MB/s | 103 kB     00:00
+(38/72): glibc-langpack-en-2.28-127.el8_3.2.x86_64.rpm                                                                                      7.1 MB/s | 824 kB     00:00
+(39/72): kmod-libs-25-16.el8_3.1.x86_64.rpm                                                                                                 663 kB/s |  68 kB     00:00
+(40/72): microcode_ctl-20200609-2.20210216.1.el8_3.x86_64.rpm                                                                                26 MB/s | 4.6 MB     00:00
+(41/72): grub2-common-2.02-90.el8_3.1.noarch.rpm                                                                                            7.6 MB/s | 885 kB     00:00
+(42/72): bind-export-libs-9.11.20-5.el8_3.1.x86_64.rpm                                                                                      8.3 MB/s | 1.1 MB     00:00
+(43/72): grub2-tools-2.02-90.el8_3.1.x86_64.rpm                                                                                              15 MB/s | 2.0 MB     00:00
+(44/72): grub2-tools-minimal-2.02-90.el8_3.1.x86_64.rpm                                                                                     2.0 MB/s | 206 kB     00:00
+(45/72): grub2-pc-modules-2.02-90.el8_3.1.noarch.rpm                                                                                        7.2 MB/s | 868 kB     00:00
+(46/72): grub2-pc-2.02-90.el8_3.1.x86_64.rpm                                                                                                403 kB/s |  39 kB     00:00
+(47/72): grub2-tools-extra-2.02-90.el8_3.1.x86_64.rpm                                                                                       8.9 MB/s | 1.1 MB     00:00
+(48/72): openssl-1.1.1g-15.el8_3.x86_64.rpm                                                                                                 6.0 MB/s | 707 kB     00:00
+(49/72): openssl-libs-1.1.1g-15.el8_3.x86_64.rpm                                                                                             12 MB/s | 1.5 MB     00:00
+(50/72): NetworkManager-tui-1.26.0-14.el8_3.x86_64.rpm                                                                                      3.3 MB/s | 320 kB     00:00
+(51/72): zlib-1.2.11-16.2.el8_3.x86_64.rpm                                                                                                  1.0 MB/s | 102 kB     00:00
+(52/72): crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch.rpm                                                                             645 kB/s |  62 kB     00:00
+(53/72): python3-magic-5.33-16.el8_3.1.noarch.rpm                                                                                           477 kB/s |  46 kB     00:00
+(54/72): NetworkManager-libnm-1.26.0-14.el8_3.x86_64.rpm                                                                                     13 MB/s | 1.8 MB     00:00
+(55/72): NetworkManager-1.26.0-14.el8_3.x86_64.rpm                                                                                           19 MB/s | 2.4 MB     00:00
+(56/72): systemd-pam-239-41.el8_3.2.x86_64.rpm                                                                                              3.5 MB/s | 456 kB     00:00
+(57/72): file-libs-5.33-16.el8_3.1.x86_64.rpm                                                                                               4.4 MB/s | 543 kB     00:00
+(58/72): systemd-libs-239-41.el8_3.2.x86_64.rpm                                                                                             8.8 MB/s | 1.1 MB     00:00
+(59/72): crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch.rpm                                                                     733 kB/s |  67 kB     00:00
+(60/72): kernel-tools-libs-4.18.0-240.22.1.el8_3.x86_64.rpm                                                                                  25 MB/s | 4.4 MB     00:00
+(61/72): file-5.33-16.el8_3.1.x86_64.rpm                                                                                                    808 kB/s |  77 kB     00:00
+(62/72): python3-perf-4.18.0-240.22.1.el8_3.x86_64.rpm                                                                                       25 MB/s | 4.5 MB     00:00
+(63/72): kernel-tools-4.18.0-240.22.1.el8_3.x86_64.rpm                                                                                       21 MB/s | 4.5 MB     00:00
+(64/72): systemd-udev-239-41.el8_3.2.x86_64.rpm                                                                                              10 MB/s | 1.3 MB     00:00
+(65/72): NetworkManager-team-1.26.0-14.el8_3.x86_64.rpm                                                                                     1.4 MB/s | 142 kB     00:00
+(66/72): systemd-239-41.el8_3.2.x86_64.rpm                                                                                                   22 MB/s | 3.5 MB     00:00
+(67/72): libldb-2.1.3-3.el8_3.x86_64.rpm                                                                                                    1.7 MB/s | 179 kB     00:00
+(68/72): nettle-3.4.1-4.el8_3.x86_64.rpm                                                                                                    2.9 MB/s | 301 kB     00:00
+(69/72): gnutls-3.6.14-8.el8_3.x86_64.rpm                                                                                                   8.0 MB/s | 1.0 MB     00:00
+(70/72): procps-ng-3.3.15-3.el8_3.1.x86_64.rpm                                                                                              3.3 MB/s | 328 kB     00:00
+(71/72): selinux-policy-3.14.3-54.el8_3.4.noarch.rpm                                                                                        5.6 MB/s | 622 kB     00:00
+(72/72): selinux-policy-targeted-3.14.3-54.el8_3.4.noarch.rpm                                                                                51 MB/s |  15 MB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                        49 MB/s | 233 MB     00:04
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                    1/1
+  Running scriptlet: grub2-common-1:2.02-90.el8_3.1.noarch                                                                                                              1/1
+  Upgrading        : grub2-common-1:2.02-90.el8_3.1.noarch                                                                                                            1/139
+  Upgrading        : crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch                                                                                       2/139
+  Upgrading        : crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch                                                                                               3/139
+  Running scriptlet: crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch                                                                                               3/139
+  Upgrading        : python3-syspurpose-1.27.18-1.el8_3.x86_64                                                                                                        4/139
+  Upgrading        : grub2-pc-modules-1:2.02-90.el8_3.1.noarch                                                                                                        5/139
+  Upgrading        : selinux-policy-3.14.3-54.el8_3.4.noarch                                                                                                          6/139
+  Running scriptlet: selinux-policy-3.14.3-54.el8_3.4.noarch                                                                                                          6/139
+  Upgrading        : subscription-manager-rhsm-certificates-1.27.18-1.el8_3.x86_64                                                                                    7/139
+  Upgrading        : dbus-common-1:1.12.8-12.el8_3.noarch                                                                                                             8/139
+  Upgrading        : tzdata-2021a-1.el8.noarch                                                                                                                        9/139
+  Running scriptlet: glibc-2.28-127.el8_3.2.x86_64                                                                                                                   10/139
+  Upgrading        : glibc-2.28-127.el8_3.2.x86_64                                                                                                                   10/139
+  Running scriptlet: glibc-2.28-127.el8_3.2.x86_64                                                                                                                   10/139
+  Upgrading        : glibc-common-2.28-127.el8_3.2.x86_64                                                                                                            11/139
+  Upgrading        : glibc-langpack-en-2.28-127.el8_3.2.x86_64                                                                                                       12/139
+  Upgrading        : zlib-1.2.11-16.2.el8_3.x86_64                                                                                                                   13/139
+  Upgrading        : systemd-libs-239-41.el8_3.2.x86_64                                                                                                              14/139
+  Running scriptlet: systemd-libs-239-41.el8_3.2.x86_64                                                                                                              14/139
+  Upgrading        : openssl-libs-1:1.1.1g-15.el8_3.x86_64                                                                                                           15/139
+  Running scriptlet: openssl-libs-1:1.1.1g-15.el8_3.x86_64                                                                                                           15/139
+  Upgrading        : kmod-libs-25-16.el8_3.1.x86_64                                                                                                                  16/139
+  Running scriptlet: kmod-libs-25-16.el8_3.1.x86_64                                                                                                                  16/139
+  Upgrading        : libcurl-7.61.1-14.el8_3.1.x86_64                                                                                                                17/139
+  Upgrading        : kmod-25-16.el8_3.1.x86_64                                                                                                                       18/139
+  Upgrading        : dbus-libs-1:1.12.8-12.el8_3.x86_64                                                                                                              19/139
+  Running scriptlet: dbus-libs-1:1.12.8-12.el8_3.x86_64                                                                                                              19/139
+  Upgrading        : procps-ng-3.3.15-3.el8_3.1.x86_64                                                                                                               20/139
+  Upgrading        : dbus-tools-1:1.12.8-12.el8_3.x86_64                                                                                                             21/139
+  Running scriptlet: dbus-daemon-1:1.12.8-12.el8_3.x86_64                                                                                                            22/139
+  Upgrading        : dbus-daemon-1:1.12.8-12.el8_3.x86_64                                                                                                            22/139
+  Running scriptlet: dbus-daemon-1:1.12.8-12.el8_3.x86_64                                                                                                            22/139
+  Upgrading        : python3-subscription-manager-rhsm-1.27.18-1.el8_3.x86_64                                                                                        23/139
+  Upgrading        : dnf-plugin-subscription-manager-1.27.18-1.el8_3.x86_64                                                                                          24/139
+  Upgrading        : freetype-2.9.1-4.el8_3.1.x86_64                                                                                                                 25/139
+  Upgrading        : file-libs-5.33-16.el8_3.1.x86_64                                                                                                                26/139
+  Upgrading        : file-5.33-16.el8_3.1.x86_64                                                                                                                     27/139
+  Upgrading        : python3-magic-5.33-16.el8_3.1.noarch                                                                                                            28/139
+  Upgrading        : iptables-libs-1.8.4-15.el8_3.3.x86_64                                                                                                           29/139
+  Upgrading        : kernel-tools-libs-4.18.0-240.22.1.el8_3.x86_64                                                                                                  30/139
+  Running scriptlet: kernel-tools-libs-4.18.0-240.22.1.el8_3.x86_64                                                                                                  30/139
+  Upgrading        : kernel-tools-4.18.0-240.22.1.el8_3.x86_64                                                                                                       31/139
+  Upgrading        : python3-perf-4.18.0-240.22.1.el8_3.x86_64                                                                                                       32/139
+  Upgrading        : nettle-3.4.1-4.el8_3.x86_64                                                                                                                     33/139
+  Running scriptlet: nettle-3.4.1-4.el8_3.x86_64                                                                                                                     33/139
+  Upgrading        : gnutls-3.6.14-8.el8_3.x86_64                                                                                                                    34/139
+  Upgrading        : systemd-pam-239-41.el8_3.2.x86_64                                                                                                               35/139
+  Running scriptlet: systemd-239-41.el8_3.2.x86_64                                                                                                                   36/139
+  Upgrading        : systemd-239-41.el8_3.2.x86_64                                                                                                                   36/139
+  Running scriptlet: systemd-239-41.el8_3.2.x86_64                                                                                                                   36/139
+  Upgrading        : dbus-1:1.12.8-12.el8_3.x86_64                                                                                                                   37/139
+  Upgrading        : systemd-udev-239-41.el8_3.2.x86_64                                                                                                              38/139
+  Running scriptlet: systemd-udev-239-41.el8_3.2.x86_64                                                                                                              38/139
+  Upgrading        : dracut-049-95.git20200804.el8_3.4.x86_64                                                                                                        39/139
+  Upgrading        : NetworkManager-libnm-1:1.26.0-14.el8_3.x86_64                                                                                                   40/139
+  Running scriptlet: NetworkManager-libnm-1:1.26.0-14.el8_3.x86_64                                                                                                   40/139
+  Running scriptlet: NetworkManager-1:1.26.0-14.el8_3.x86_64                                                                                                         41/139
+  Upgrading        : NetworkManager-1:1.26.0-14.el8_3.x86_64                                                                                                         41/139
+  Running scriptlet: NetworkManager-1:1.26.0-14.el8_3.x86_64                                                                                                         41/139
+  Upgrading        : dracut-squash-049-95.git20200804.el8_3.4.x86_64                                                                                                 42/139
+  Upgrading        : dracut-network-049-95.git20200804.el8_3.4.x86_64                                                                                                43/139
+  Upgrading        : device-mapper-libs-8:1.02.171-5.el8_3.2.x86_64                                                                                                  44/139
+  Upgrading        : device-mapper-8:1.02.171-5.el8_3.2.x86_64                                                                                                       45/139
+  Upgrading        : grub2-tools-minimal-1:2.02-90.el8_3.1.x86_64                                                                                                    46/139
+  Upgrading        : grub2-tools-extra-1:2.02-90.el8_3.1.x86_64                                                                                                      47/139
+  Running scriptlet: grub2-tools-1:2.02-90.el8_3.1.x86_64                                                                                                            48/139
+  Upgrading        : grub2-tools-1:2.02-90.el8_3.1.x86_64                                                                                                            48/139
+  Running scriptlet: grub2-tools-1:2.02-90.el8_3.1.x86_64                                                                                                            48/139
+  Installing       : linux-firmware-20200619-101.git3890db36.el8_3.noarch                                                                                            49/139
+  Installing       : kernel-core-4.18.0-240.22.1.el8_3.x86_64                                                                                                        50/139
+  Running scriptlet: kernel-core-4.18.0-240.22.1.el8_3.x86_64                                                                                                        50/139
+  Installing       : kernel-modules-4.18.0-240.22.1.el8_3.x86_64                                                                                                     51/139
+  Running scriptlet: kernel-modules-4.18.0-240.22.1.el8_3.x86_64                                                                                                     51/139
+  Installing       : kernel-4.18.0-240.22.1.el8_3.x86_64                                                                                                             52/139
+  Upgrading        : grub2-pc-1:2.02-90.el8_3.1.x86_64                                                                                                               53/139
+  Installing       : grub2-tools-efi-1:2.02-90.el8_3.1.x86_64                                                                                                        54/139
+  Upgrading        : kexec-tools-2.0.20-34.el8_3.2.x86_64                                                                                                            55/139
+  Running scriptlet: kexec-tools-2.0.20-34.el8_3.2.x86_64                                                                                                            55/139
+  Upgrading        : NetworkManager-tui-1:1.26.0-14.el8_3.x86_64                                                                                                     56/139
+  Upgrading        : NetworkManager-team-1:1.26.0-14.el8_3.x86_64                                                                                                    57/139
+  Upgrading        : dracut-config-rescue-049-95.git20200804.el8_3.4.x86_64                                                                                          58/139
+  Upgrading        : dracut-config-generic-049-95.git20200804.el8_3.4.x86_64                                                                                         59/139
+  Upgrading        : tuned-2.14.0-3.el8_3.2.noarch                                                                                                                   60/139
+  Running scriptlet: tuned-2.14.0-3.el8_3.2.noarch                                                                                                                   60/139
+  Upgrading        : insights-client-3.1.1-1.el8_3.noarch                                                                                                            61/139
+  Running scriptlet: insights-client-3.1.1-1.el8_3.noarch                                                                                                            61/139
+  Upgrading        : qemu-guest-agent-15:4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5.x86_64                                                                             62/139
+  Upgrading        : cloud-init-19.4-11.el8_3.3.noarch                                                                                                               63/139
+  Running scriptlet: cloud-init-19.4-11.el8_3.3.noarch                                                                                                               63/139
+  Upgrading        : subscription-manager-1.27.18-1.el8_3.x86_64                                                                                                     64/139
+  Running scriptlet: subscription-manager-1.27.18-1.el8_3.x86_64                                                                                                     64/139
+  Upgrading        : microcode_ctl-4:20200609-2.20210216.1.el8_3.x86_64                                                                                              65/139
+  Running scriptlet: microcode_ctl-4:20200609-2.20210216.1.el8_3.x86_64                                                                                              65/139
+  Upgrading        : curl-7.61.1-14.el8_3.1.x86_64                                                                                                                   66/139
+  Upgrading        : bind-export-libs-32:9.11.20-5.el8_3.1.x86_64                                                                                                    67/139
+  Running scriptlet: bind-export-libs-32:9.11.20-5.el8_3.1.x86_64                                                                                                    67/139
+  Upgrading        : openssl-1:1.1.1g-15.el8_3.x86_64                                                                                                                68/139
+  Upgrading        : sudo-1.8.29-6.el8_3.1.x86_64                                                                                                                    69/139
+  Running scriptlet: sudo-1.8.29-6.el8_3.1.x86_64                                                                                                                    69/139
+  Upgrading        : libldb-2.1.3-3.el8_3.x86_64                                                                                                                     70/139
+  Running scriptlet: selinux-policy-targeted-3.14.3-54.el8_3.4.noarch                                                                                                71/139
+  Upgrading        : selinux-policy-targeted-3.14.3-54.el8_3.4.noarch                                                                                                71/139
+  Running scriptlet: selinux-policy-targeted-3.14.3-54.el8_3.4.noarch                                                                                                71/139
+  Upgrading        : rh-amazon-rhui-client-3.0.40-1.el8.noarch                                                                                                       72/139
+  Running scriptlet: rh-amazon-rhui-client-3.0.40-1.el8.noarch                                                                                                       72/139
+[INFO:choose_repo] choose_repo:36 2021-04-30 03:29:42,931: Enabling binary repos in redhat-rhui.repo
+[INFO:choose_repo] choose_repo:58 2021-04-30 03:29:42,933: Enabling client config repo
+[INFO:choose_repo] choose_repo:66 2021-04-30 03:29:42,933: Executing [sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/redhat-rhui-client-config.repo]
+
+  Cleanup          : grub2-pc-1:2.02-90.el8.x86_64                                                                                                                   73/139
+  Running scriptlet: tuned-2.14.0-3.el8.noarch                                                                                                                       74/139
+  Cleanup          : tuned-2.14.0-3.el8.noarch                                                                                                                       74/139
+  Running scriptlet: tuned-2.14.0-3.el8.noarch                                                                                                                       74/139
+  Running scriptlet: cloud-init-19.4-11.el8.noarch                                                                                                                   75/139
+  Cleanup          : cloud-init-19.4-11.el8.noarch                                                                                                                   75/139
+  Running scriptlet: cloud-init-19.4-11.el8.noarch                                                                                                                   75/139
+  Running scriptlet: insights-client-3.1.0-3.el8.noarch                                                                                                              76/139
+  Cleanup          : insights-client-3.1.0-3.el8.noarch                                                                                                              76/139
+  Running scriptlet: insights-client-3.1.0-3.el8.noarch                                                                                                              76/139
+  Running scriptlet: microcode_ctl-4:20200609-2.el8.x86_64                                                                                                           77/139
+  Cleanup          : microcode_ctl-4:20200609-2.el8.x86_64                                                                                                           77/139
+  Running scriptlet: microcode_ctl-4:20200609-2.el8.x86_64                                                                                                           77/139
+  Cleanup          : selinux-policy-targeted-3.14.3-54.el8.noarch                                                                                                    78/139
+  Running scriptlet: selinux-policy-targeted-3.14.3-54.el8.noarch                                                                                                    78/139
+  Cleanup          : python3-magic-5.33-16.el8.noarch                                                                                                                79/139
+  Cleanup          : grub2-pc-modules-1:2.02-90.el8.noarch                                                                                                           80/139
+  Cleanup          : dracut-config-generic-049-95.git20200804.el8.x86_64                                                                                             81/139
+  Cleanup          : dracut-config-rescue-049-95.git20200804.el8.x86_64                                                                                              82/139
+  Cleanup          : selinux-policy-3.14.3-54.el8.noarch                                                                                                             83/139
+  Running scriptlet: selinux-policy-3.14.3-54.el8.noarch                                                                                                             83/139
+  Running scriptlet: rh-amazon-rhui-client-3.0.32-1.el8.noarch                                                                                                       84/139
+  Cleanup          : rh-amazon-rhui-client-3.0.32-1.el8.noarch                                                                                                       84/139
+  Cleanup          : NetworkManager-tui-1:1.26.0-9.el8_3.x86_64                                                                                                      85/139
+  Running scriptlet: kexec-tools-2.0.20-34.el8.x86_64                                                                                                                86/139
+  Cleanup          : kexec-tools-2.0.20-34.el8.x86_64                                                                                                                86/139
+  Running scriptlet: kexec-tools-2.0.20-34.el8.x86_64                                                                                                                86/139
+  Cleanup          : sudo-1.8.29-6.el8.x86_64                                                                                                                        87/139
+  Cleanup          : qemu-guest-agent-15:4.2.0-34.module+el8.3.0+7976+077be4ec.x86_64                                                                                88/139
+  Cleanup          : device-mapper-8:1.02.171-5.el8.x86_64                                                                                                           89/139
+  Cleanup          : openssl-1:1.1.1g-11.el8.x86_64                                                                                                                  90/139
+  Cleanup          : kernel-tools-4.18.0-240.1.1.el8_3.x86_64                                                                                                        91/139
+  Cleanup          : curl-7.61.1-14.el8.x86_64                                                                                                                       92/139
+  Cleanup          : bind-export-libs-32:9.11.20-5.el8.x86_64                                                                                                        93/139
+  Running scriptlet: bind-export-libs-32:9.11.20-5.el8.x86_64                                                                                                        93/139
+  Cleanup          : python3-perf-4.18.0-240.1.1.el8_3.x86_64                                                                                                        94/139
+  Running scriptlet: grub2-tools-1:2.02-90.el8.x86_64                                                                                                                95/139
+  Cleanup          : grub2-tools-1:2.02-90.el8.x86_64                                                                                                                95/139
+  Cleanup          : grub2-tools-extra-1:2.02-90.el8.x86_64                                                                                                          96/139
+  Running scriptlet: subscription-manager-1.27.16-1.el8.x86_64                                                                                                       97/139
+  Cleanup          : subscription-manager-1.27.16-1.el8.x86_64                                                                                                       97/139
+  Running scriptlet: subscription-manager-1.27.16-1.el8.x86_64                                                                                                       97/139
+  Cleanup          : python3-subscription-manager-rhsm-1.27.16-1.el8.x86_64                                                                                          98/139
+  Cleanup          : grub2-tools-minimal-1:2.02-90.el8.x86_64                                                                                                        99/139
+  Cleanup          : device-mapper-libs-8:1.02.171-5.el8.x86_64                                                                                                     100/139
+  Cleanup          : libldb-2.1.3-2.el8.x86_64                                                                                                                      101/139
+  Cleanup          : file-5.33-16.el8.x86_64                                                                                                                        102/139
+  Cleanup          : file-libs-5.33-16.el8.x86_64                                                                                                                   103/139
+  Cleanup          : freetype-2.9.1-4.el8.x86_64                                                                                                                    104/139
+  Cleanup          : dnf-plugin-subscription-manager-1.27.16-1.el8.x86_64                                                                                           105/139
+  Cleanup          : NetworkManager-team-1:1.26.0-9.el8_3.x86_64                                                                                                    106/139
+  Cleanup          : dracut-network-049-95.git20200804.el8.x86_64                                                                                                   107/139
+  Cleanup          : dracut-squash-049-95.git20200804.el8.x86_64                                                                                                    108/139
+  Running scriptlet: NetworkManager-1:1.26.0-9.el8_3.x86_64                                                                                                         109/139
+  Cleanup          : NetworkManager-1:1.26.0-9.el8_3.x86_64                                                                                                         109/139
+  Running scriptlet: NetworkManager-1:1.26.0-9.el8_3.x86_64                                                                                                         109/139
+  Cleanup          : NetworkManager-libnm-1:1.26.0-9.el8_3.x86_64                                                                                                   110/139
+  Running scriptlet: NetworkManager-libnm-1:1.26.0-9.el8_3.x86_64                                                                                                   110/139
+  Cleanup          : libcurl-7.61.1-14.el8.x86_64                                                                                                                   111/139
+  Cleanup          : dracut-049-95.git20200804.el8.x86_64                                                                                                           112/139
+  Cleanup          : systemd-udev-239-41.el8_3.x86_64                                                                                                               113/139
+  Running scriptlet: systemd-udev-239-41.el8_3.x86_64                                                                                                               113/139
+  Cleanup          : dbus-1:1.12.8-11.el8.x86_64                                                                                                                    114/139
+  Cleanup          : systemd-pam-239-41.el8_3.x86_64                                                                                                                115/139
+  Running scriptlet: systemd-239-41.el8_3.x86_64                                                                                                                    116/139
+  Cleanup          : systemd-239-41.el8_3.x86_64                                                                                                                    116/139
+  Cleanup          : gnutls-3.6.14-6.el8.x86_64                                                                                                                     117/139
+  Running scriptlet: dbus-daemon-1:1.12.8-11.el8.x86_64                                                                                                             118/139
+  Cleanup          : dbus-daemon-1:1.12.8-11.el8.x86_64                                                                                                             118/139
+  Running scriptlet: dbus-daemon-1:1.12.8-11.el8.x86_64                                                                                                             118/139
+  Cleanup          : procps-ng-3.3.15-3.el8.x86_64                                                                                                                  119/139
+  Cleanup          : kmod-libs-25-16.el8.x86_64                                                                                                                     120/139
+  Running scriptlet: kmod-libs-25-16.el8.x86_64                                                                                                                     120/139
+  Cleanup          : dbus-tools-1:1.12.8-11.el8.x86_64                                                                                                              121/139
+  Cleanup          : dbus-libs-1:1.12.8-11.el8.x86_64                                                                                                               122/139
+  Running scriptlet: dbus-libs-1:1.12.8-11.el8.x86_64                                                                                                               122/139
+  Cleanup          : systemd-libs-239-41.el8_3.x86_64                                                                                                               123/139
+  Cleanup          : iptables-libs-1.8.4-15.el8.x86_64                                                                                                              124/139
+  Cleanup          : kmod-25-16.el8.x86_64                                                                                                                          125/139
+  Cleanup          : openssl-libs-1:1.1.1g-11.el8.x86_64                                                                                                            126/139
+  Running scriptlet: openssl-libs-1:1.1.1g-11.el8.x86_64                                                                                                            126/139
+  Running scriptlet: nettle-3.4.1-2.el8.x86_64                                                                                                                      127/139
+  Cleanup          : nettle-3.4.1-2.el8.x86_64                                                                                                                      127/139
+  Running scriptlet: nettle-3.4.1-2.el8.x86_64                                                                                                                      127/139
+  Cleanup          : zlib-1.2.11-16.el8_2.x86_64                                                                                                                    128/139
+  Cleanup          : kernel-tools-libs-4.18.0-240.1.1.el8_3.x86_64                                                                                                  129/139
+  Running scriptlet: kernel-tools-libs-4.18.0-240.1.1.el8_3.x86_64                                                                                                  129/139
+  Cleanup          : crypto-policies-20200713-1.git51d1222.el8.noarch                                                                                               130/139
+  Cleanup          : crypto-policies-scripts-20200713-1.git51d1222.el8.noarch                                                                                       131/139
+  Cleanup          : dbus-common-1:1.12.8-11.el8.noarch                                                                                                             132/139
+  Cleanup          : grub2-common-1:2.02-90.el8.noarch                                                                                                              133/139
+  Cleanup          : subscription-manager-rhsm-certificates-1.27.16-1.el8.x86_64                                                                                    134/139
+  Cleanup          : python3-syspurpose-1.27.16-1.el8.x86_64                                                                                                        135/139
+  Cleanup          : glibc-2.28-127.el8.x86_64                                                                                                                      136/139
+  Cleanup          : glibc-langpack-en-2.28-127.el8.x86_64                                                                                                          137/139
+  Cleanup          : glibc-common-2.28-127.el8.x86_64                                                                                                               138/139
+  Cleanup          : tzdata-2020d-1.el8.noarch                                                                                                                      139/139
+  Running scriptlet: crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch                                                                                     139/139
+  Running scriptlet: kernel-core-4.18.0-240.22.1.el8_3.x86_64                                                                                                       139/139
+Failed to add dependency on unit, unit systemd-ask-password-plymouth.service does not exist.
+Failed to add dependency on unit, unit systemd-ask-password-plymouth.service does not exist.
+
+  Running scriptlet: tuned-2.14.0-3.el8_3.2.noarch                                                                                                                  139/139
+  Running scriptlet: microcode_ctl-4:20200609-2.20210216.1.el8_3.x86_64                                                                                             139/139
+Failed to add dependency on unit, unit systemd-ask-password-plymouth.service does not exist.
+Failed to add dependency on unit, unit systemd-ask-password-plymouth.service does not exist.
+
+  Running scriptlet: tzdata-2020d-1.el8.noarch                                                                                                                      139/139
+  Running scriptlet: glibc-common-2.28-127.el8_3.2.x86_64                                                                                                           139/139
+  Running scriptlet: systemd-239-41.el8_3.2.x86_64                                                                                                                  139/139
+  Running scriptlet: systemd-udev-239-41.el8_3.2.x86_64                                                                                                             139/139
+  Verifying        : linux-firmware-20200619-101.git3890db36.el8_3.noarch                                                                                             1/139
+  Verifying        : grub2-tools-efi-1:2.02-90.el8_3.1.x86_64                                                                                                         2/139
+  Verifying        : kernel-core-4.18.0-240.22.1.el8_3.x86_64                                                                                                         3/139
+  Verifying        : kernel-modules-4.18.0-240.22.1.el8_3.x86_64                                                                                                      4/139
+  Verifying        : kernel-4.18.0-240.22.1.el8_3.x86_64                                                                                                              5/139
+  Verifying        : rh-amazon-rhui-client-3.0.40-1.el8.noarch                                                                                                        6/139
+  Verifying        : rh-amazon-rhui-client-3.0.32-1.el8.noarch                                                                                                        7/139
+  Verifying        : insights-client-3.1.1-1.el8_3.noarch                                                                                                             8/139
+  Verifying        : insights-client-3.1.0-3.el8.noarch                                                                                                               9/139
+  Verifying        : qemu-guest-agent-15:4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5.x86_64                                                                             10/139
+  Verifying        : qemu-guest-agent-15:4.2.0-34.module+el8.3.0+7976+077be4ec.x86_64                                                                                11/139
+  Verifying        : cloud-init-19.4-11.el8_3.3.noarch                                                                                                               12/139
+  Verifying        : cloud-init-19.4-11.el8.noarch                                                                                                                   13/139
+  Verifying        : freetype-2.9.1-4.el8_3.1.x86_64                                                                                                                 14/139
+  Verifying        : freetype-2.9.1-4.el8.x86_64                                                                                                                     15/139
+  Verifying        : curl-7.61.1-14.el8_3.1.x86_64                                                                                                                   16/139
+  Verifying        : curl-7.61.1-14.el8.x86_64                                                                                                                       17/139
+  Verifying        : libcurl-7.61.1-14.el8_3.1.x86_64                                                                                                                18/139
+  Verifying        : libcurl-7.61.1-14.el8.x86_64                                                                                                                    19/139
+  Verifying        : iptables-libs-1.8.4-15.el8_3.3.x86_64                                                                                                           20/139
+  Verifying        : iptables-libs-1.8.4-15.el8.x86_64                                                                                                               21/139
+  Verifying        : tzdata-2021a-1.el8.noarch                                                                                                                       22/139
+  Verifying        : tzdata-2020d-1.el8.noarch                                                                                                                       23/139
+  Verifying        : sudo-1.8.29-6.el8_3.1.x86_64                                                                                                                    24/139
+  Verifying        : sudo-1.8.29-6.el8.x86_64                                                                                                                        25/139
+  Verifying        : dbus-tools-1:1.12.8-12.el8_3.x86_64                                                                                                             26/139
+  Verifying        : dbus-tools-1:1.12.8-11.el8.x86_64                                                                                                               27/139
+  Verifying        : dracut-config-rescue-049-95.git20200804.el8_3.4.x86_64                                                                                          28/139
+  Verifying        : dracut-config-rescue-049-95.git20200804.el8.x86_64                                                                                              29/139
+  Verifying        : python3-subscription-manager-rhsm-1.27.18-1.el8_3.x86_64                                                                                        30/139
+  Verifying        : python3-subscription-manager-rhsm-1.27.16-1.el8.x86_64                                                                                          31/139
+  Verifying        : device-mapper-8:1.02.171-5.el8_3.2.x86_64                                                                                                       32/139
+  Verifying        : device-mapper-8:1.02.171-5.el8.x86_64                                                                                                           33/139
+  Verifying        : glibc-2.28-127.el8_3.2.x86_64                                                                                                                   34/139
+  Verifying        : glibc-2.28-127.el8.x86_64                                                                                                                       35/139
+  Verifying        : dnf-plugin-subscription-manager-1.27.18-1.el8_3.x86_64                                                                                          36/139
+  Verifying        : dnf-plugin-subscription-manager-1.27.16-1.el8.x86_64                                                                                            37/139
+  Verifying        : dracut-config-generic-049-95.git20200804.el8_3.4.x86_64                                                                                         38/139
+  Verifying        : dracut-config-generic-049-95.git20200804.el8.x86_64                                                                                             39/139
+  Verifying        : dbus-common-1:1.12.8-12.el8_3.noarch                                                                                                            40/139
+  Verifying        : dbus-common-1:1.12.8-11.el8.noarch                                                                                                              41/139
+  Verifying        : tuned-2.14.0-3.el8_3.2.noarch                                                                                                                   42/139
+  Verifying        : tuned-2.14.0-3.el8.noarch                                                                                                                       43/139
+  Verifying        : subscription-manager-rhsm-certificates-1.27.18-1.el8_3.x86_64                                                                                   44/139
+  Verifying        : subscription-manager-rhsm-certificates-1.27.16-1.el8.x86_64                                                                                     45/139
+  Verifying        : glibc-common-2.28-127.el8_3.2.x86_64                                                                                                            46/139
+  Verifying        : glibc-common-2.28-127.el8.x86_64                                                                                                                47/139
+  Verifying        : dbus-daemon-1:1.12.8-12.el8_3.x86_64                                                                                                            48/139
+  Verifying        : dbus-daemon-1:1.12.8-11.el8.x86_64                                                                                                              49/139
+  Verifying        : dbus-libs-1:1.12.8-12.el8_3.x86_64                                                                                                              50/139
+  Verifying        : dbus-libs-1:1.12.8-11.el8.x86_64                                                                                                                51/139
+  Verifying        : kmod-25-16.el8_3.1.x86_64                                                                                                                       52/139
+  Verifying        : kmod-25-16.el8.x86_64                                                                                                                           53/139
+  Verifying        : dracut-squash-049-95.git20200804.el8_3.4.x86_64                                                                                                 54/139
+  Verifying        : dracut-squash-049-95.git20200804.el8.x86_64                                                                                                     55/139
+  Verifying        : dracut-049-95.git20200804.el8_3.4.x86_64                                                                                                        56/139
+  Verifying        : dracut-049-95.git20200804.el8.x86_64                                                                                                            57/139
+  Verifying        : dbus-1:1.12.8-12.el8_3.x86_64                                                                                                                   58/139
+  Verifying        : dbus-1:1.12.8-11.el8.x86_64                                                                                                                     59/139
+  Verifying        : subscription-manager-1.27.18-1.el8_3.x86_64                                                                                                     60/139
+  Verifying        : subscription-manager-1.27.16-1.el8.x86_64                                                                                                       61/139
+  Verifying        : python3-syspurpose-1.27.18-1.el8_3.x86_64                                                                                                       62/139
+  Verifying        : python3-syspurpose-1.27.16-1.el8.x86_64                                                                                                         63/139
+  Verifying        : kexec-tools-2.0.20-34.el8_3.2.x86_64                                                                                                            64/139
+  Verifying        : kexec-tools-2.0.20-34.el8.x86_64                                                                                                                65/139
+  Verifying        : device-mapper-libs-8:1.02.171-5.el8_3.2.x86_64                                                                                                  66/139
+  Verifying        : device-mapper-libs-8:1.02.171-5.el8.x86_64                                                                                                      67/139
+  Verifying        : dracut-network-049-95.git20200804.el8_3.4.x86_64                                                                                                68/139
+  Verifying        : dracut-network-049-95.git20200804.el8.x86_64                                                                                                    69/139
+  Verifying        : glibc-langpack-en-2.28-127.el8_3.2.x86_64                                                                                                       70/139
+  Verifying        : glibc-langpack-en-2.28-127.el8.x86_64                                                                                                           71/139
+  Verifying        : kmod-libs-25-16.el8_3.1.x86_64                                                                                                                  72/139
+  Verifying        : kmod-libs-25-16.el8.x86_64                                                                                                                      73/139
+  Verifying        : microcode_ctl-4:20200609-2.20210216.1.el8_3.x86_64                                                                                              74/139
+  Verifying        : microcode_ctl-4:20200609-2.el8.x86_64                                                                                                           75/139
+  Verifying        : bind-export-libs-32:9.11.20-5.el8_3.1.x86_64                                                                                                    76/139
+  Verifying        : bind-export-libs-32:9.11.20-5.el8.x86_64                                                                                                        77/139
+  Verifying        : grub2-common-1:2.02-90.el8_3.1.noarch                                                                                                           78/139
+  Verifying        : grub2-common-1:2.02-90.el8.noarch                                                                                                               79/139
+  Verifying        : grub2-tools-1:2.02-90.el8_3.1.x86_64                                                                                                            80/139
+  Verifying        : grub2-tools-1:2.02-90.el8.x86_64                                                                                                                81/139
+  Verifying        : grub2-pc-modules-1:2.02-90.el8_3.1.noarch                                                                                                       82/139
+  Verifying        : grub2-pc-modules-1:2.02-90.el8.noarch                                                                                                           83/139
+  Verifying        : grub2-tools-minimal-1:2.02-90.el8_3.1.x86_64                                                                                                    84/139
+  Verifying        : grub2-tools-minimal-1:2.02-90.el8.x86_64                                                                                                        85/139
+  Verifying        : grub2-pc-1:2.02-90.el8_3.1.x86_64                                                                                                               86/139
+  Verifying        : grub2-pc-1:2.02-90.el8.x86_64                                                                                                                   87/139
+  Verifying        : grub2-tools-extra-1:2.02-90.el8_3.1.x86_64                                                                                                      88/139
+  Verifying        : grub2-tools-extra-1:2.02-90.el8.x86_64                                                                                                          89/139
+  Verifying        : openssl-1:1.1.1g-15.el8_3.x86_64                                                                                                                90/139
+  Verifying        : openssl-1:1.1.1g-11.el8.x86_64                                                                                                                  91/139
+  Verifying        : openssl-libs-1:1.1.1g-15.el8_3.x86_64                                                                                                           92/139
+  Verifying        : openssl-libs-1:1.1.1g-11.el8.x86_64                                                                                                             93/139
+  Verifying        : NetworkManager-tui-1:1.26.0-14.el8_3.x86_64                                                                                                     94/139
+  Verifying        : NetworkManager-tui-1:1.26.0-9.el8_3.x86_64                                                                                                      95/139
+  Verifying        : zlib-1.2.11-16.2.el8_3.x86_64                                                                                                                   96/139
+  Verifying        : zlib-1.2.11-16.el8_2.x86_64                                                                                                                     97/139
+  Verifying        : crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch                                                                                              98/139
+  Verifying        : crypto-policies-20200713-1.git51d1222.el8.noarch                                                                                                99/139
+  Verifying        : NetworkManager-libnm-1:1.26.0-14.el8_3.x86_64                                                                                                  100/139
+  Verifying        : NetworkManager-libnm-1:1.26.0-9.el8_3.x86_64                                                                                                   101/139
+  Verifying        : python3-magic-5.33-16.el8_3.1.noarch                                                                                                           102/139
+  Verifying        : python3-magic-5.33-16.el8.noarch                                                                                                               103/139
+  Verifying        : NetworkManager-1:1.26.0-14.el8_3.x86_64                                                                                                        104/139
+  Verifying        : NetworkManager-1:1.26.0-9.el8_3.x86_64                                                                                                         105/139
+  Verifying        : systemd-pam-239-41.el8_3.2.x86_64                                                                                                              106/139
+  Verifying        : systemd-pam-239-41.el8_3.x86_64                                                                                                                107/139
+  Verifying        : file-libs-5.33-16.el8_3.1.x86_64                                                                                                               108/139
+  Verifying        : file-libs-5.33-16.el8.x86_64                                                                                                                   109/139
+  Verifying        : systemd-libs-239-41.el8_3.2.x86_64                                                                                                             110/139
+  Verifying        : systemd-libs-239-41.el8_3.x86_64                                                                                                               111/139
+  Verifying        : kernel-tools-libs-4.18.0-240.22.1.el8_3.x86_64                                                                                                 112/139
+  Verifying        : kernel-tools-libs-4.18.0-240.1.1.el8_3.x86_64                                                                                                  113/139
+  Verifying        : crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch                                                                                     114/139
+  Verifying        : crypto-policies-scripts-20200713-1.git51d1222.el8.noarch                                                                                       115/139
+  Verifying        : python3-perf-4.18.0-240.22.1.el8_3.x86_64                                                                                                      116/139
+  Verifying        : python3-perf-4.18.0-240.1.1.el8_3.x86_64                                                                                                       117/139
+  Verifying        : kernel-tools-4.18.0-240.22.1.el8_3.x86_64                                                                                                      118/139
+  Verifying        : kernel-tools-4.18.0-240.1.1.el8_3.x86_64                                                                                                       119/139
+  Verifying        : file-5.33-16.el8_3.1.x86_64                                                                                                                    120/139
+  Verifying        : file-5.33-16.el8.x86_64                                                                                                                        121/139
+  Verifying        : systemd-udev-239-41.el8_3.2.x86_64                                                                                                             122/139
+  Verifying        : systemd-udev-239-41.el8_3.x86_64                                                                                                               123/139
+  Verifying        : systemd-239-41.el8_3.2.x86_64                                                                                                                  124/139
+  Verifying        : systemd-239-41.el8_3.x86_64                                                                                                                    125/139
+  Verifying        : NetworkManager-team-1:1.26.0-14.el8_3.x86_64                                                                                                   126/139
+  Verifying        : NetworkManager-team-1:1.26.0-9.el8_3.x86_64                                                                                                    127/139
+  Verifying        : libldb-2.1.3-3.el8_3.x86_64                                                                                                                    128/139
+  Verifying        : libldb-2.1.3-2.el8.x86_64                                                                                                                      129/139
+  Verifying        : gnutls-3.6.14-8.el8_3.x86_64                                                                                                                   130/139
+  Verifying        : gnutls-3.6.14-6.el8.x86_64                                                                                                                     131/139
+  Verifying        : nettle-3.4.1-4.el8_3.x86_64                                                                                                                    132/139
+  Verifying        : nettle-3.4.1-2.el8.x86_64                                                                                                                      133/139
+  Verifying        : procps-ng-3.3.15-3.el8_3.1.x86_64                                                                                                              134/139
+  Verifying        : procps-ng-3.3.15-3.el8.x86_64                                                                                                                  135/139
+  Verifying        : selinux-policy-3.14.3-54.el8_3.4.noarch                                                                                                        136/139
+  Verifying        : selinux-policy-3.14.3-54.el8.noarch                                                                                                            137/139
+  Verifying        : selinux-policy-targeted-3.14.3-54.el8_3.4.noarch                                                                                               138/139
+  Verifying        : selinux-policy-targeted-3.14.3-54.el8.noarch                                                                                                   139/139
+
+Upgraded:
+  NetworkManager-1:1.26.0-14.el8_3.x86_64                                           NetworkManager-libnm-1:1.26.0-14.el8_3.x86_64
+  NetworkManager-team-1:1.26.0-14.el8_3.x86_64                                      NetworkManager-tui-1:1.26.0-14.el8_3.x86_64
+  bind-export-libs-32:9.11.20-5.el8_3.1.x86_64                                      cloud-init-19.4-11.el8_3.3.noarch
+  crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch                                crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch
+  curl-7.61.1-14.el8_3.1.x86_64                                                     dbus-1:1.12.8-12.el8_3.x86_64
+  dbus-common-1:1.12.8-12.el8_3.noarch                                              dbus-daemon-1:1.12.8-12.el8_3.x86_64
+  dbus-libs-1:1.12.8-12.el8_3.x86_64                                                dbus-tools-1:1.12.8-12.el8_3.x86_64
+  device-mapper-8:1.02.171-5.el8_3.2.x86_64                                         device-mapper-libs-8:1.02.171-5.el8_3.2.x86_64
+  dnf-plugin-subscription-manager-1.27.18-1.el8_3.x86_64                            dracut-049-95.git20200804.el8_3.4.x86_64
+  dracut-config-generic-049-95.git20200804.el8_3.4.x86_64                           dracut-config-rescue-049-95.git20200804.el8_3.4.x86_64
+  dracut-network-049-95.git20200804.el8_3.4.x86_64                                  dracut-squash-049-95.git20200804.el8_3.4.x86_64
+  file-5.33-16.el8_3.1.x86_64                                                       file-libs-5.33-16.el8_3.1.x86_64
+  freetype-2.9.1-4.el8_3.1.x86_64                                                   glibc-2.28-127.el8_3.2.x86_64
+  glibc-common-2.28-127.el8_3.2.x86_64                                              glibc-langpack-en-2.28-127.el8_3.2.x86_64
+  gnutls-3.6.14-8.el8_3.x86_64                                                      grub2-common-1:2.02-90.el8_3.1.noarch
+  grub2-pc-1:2.02-90.el8_3.1.x86_64                                                 grub2-pc-modules-1:2.02-90.el8_3.1.noarch
+  grub2-tools-1:2.02-90.el8_3.1.x86_64                                              grub2-tools-extra-1:2.02-90.el8_3.1.x86_64
+  grub2-tools-minimal-1:2.02-90.el8_3.1.x86_64                                      insights-client-3.1.1-1.el8_3.noarch
+  iptables-libs-1.8.4-15.el8_3.3.x86_64                                             kernel-tools-4.18.0-240.22.1.el8_3.x86_64
+  kernel-tools-libs-4.18.0-240.22.1.el8_3.x86_64                                    kexec-tools-2.0.20-34.el8_3.2.x86_64
+  kmod-25-16.el8_3.1.x86_64                                                         kmod-libs-25-16.el8_3.1.x86_64
+  libcurl-7.61.1-14.el8_3.1.x86_64                                                  libldb-2.1.3-3.el8_3.x86_64
+  microcode_ctl-4:20200609-2.20210216.1.el8_3.x86_64                                nettle-3.4.1-4.el8_3.x86_64
+  openssl-1:1.1.1g-15.el8_3.x86_64                                                  openssl-libs-1:1.1.1g-15.el8_3.x86_64
+  procps-ng-3.3.15-3.el8_3.1.x86_64                                                 python3-magic-5.33-16.el8_3.1.noarch
+  python3-perf-4.18.0-240.22.1.el8_3.x86_64                                         python3-subscription-manager-rhsm-1.27.18-1.el8_3.x86_64
+  python3-syspurpose-1.27.18-1.el8_3.x86_64                                         qemu-guest-agent-15:4.2.0-34.module+el8.3.0+10437+1ca0c2ba.5.x86_64
+  rh-amazon-rhui-client-3.0.40-1.el8.noarch                                         selinux-policy-3.14.3-54.el8_3.4.noarch
+  selinux-policy-targeted-3.14.3-54.el8_3.4.noarch                                  subscription-manager-1.27.18-1.el8_3.x86_64
+  subscription-manager-rhsm-certificates-1.27.18-1.el8_3.x86_64                     sudo-1.8.29-6.el8_3.1.x86_64
+  systemd-239-41.el8_3.2.x86_64                                                     systemd-libs-239-41.el8_3.2.x86_64
+  systemd-pam-239-41.el8_3.2.x86_64                                                 systemd-udev-239-41.el8_3.2.x86_64
+  tuned-2.14.0-3.el8_3.2.noarch                                                     tzdata-2021a-1.el8.noarch
+  zlib-1.2.11-16.2.el8_3.x86_64
+
+Installed:
+  grub2-tools-efi-1:2.02-90.el8_3.1.x86_64               kernel-4.18.0-240.22.1.el8_3.x86_64                             kernel-core-4.18.0-240.22.1.el8_3.x86_64
+  kernel-modules-4.18.0-240.22.1.el8_3.x86_64            linux-firmware-20200619-101.git3890db36.el8_3.noarch
+
+Complete!
+[root@ip-172-31-0-58 ~]# git --version
+git version 2.27.0
+[root@ip-172-31-0-58 ~]# su
+[root@ip-172-31-0-58 ~]# su -i
+su: invalid option -- 'i'
+Try 'su --help' for more information.
+[root@ip-172-31-0-58 ~]# su -h
+
+Usage:
+ su [options] [-] [<user> [<argument>...]]
+
+Change the effective user ID and group ID to that of <user>.
+A mere - implies -l.  If <user> is not given, root is assumed.
+
+Options:
+ -m, -p, --preserve-environment  do not reset environment variables
+ -g, --group <group>             specify the primary group
+ -G, --supp-group <group>        specify a supplemental group
+
+ -, -l, --login                  make the shell a login shell
+ -c, --command <command>         pass a single command to the shell with -c
+ --session-command <command>     pass a single command to the shell with -c
+                                   and do not create a new session
+ -f, --fast                      pass -f to the shell (for csh or tcsh)
+ -s, --shell <shell>             run <shell> if /etc/shells allows it
+ -P, --pty                       create a new pseudo-terminal
+
+ -h, --help                      display this help
+ -V, --version                   display version
+
+For more details see su(1).
+[root@ip-172-31-0-58 ~]# su -ec2-user
+su: invalid option -- 'e'
+Try 'su --help' for more information.
+[root@ip-172-31-0-58 ~]# su - ec2-user
+Last login: Fri Apr 30 02:48:42 UTC 2021 from 38.26.23.87 on pts/0
+[ec2-user@ip-172-31-0-58 ~]$ git --version
+git version 2.27.0
+[ec2-user@ip-172-31-0-58 ~]$ su -i
+su: invalid option -- 'i'
+Try 'su --help' for more information.
+[ec2-user@ip-172-31-0-58 ~]$ sudo -i
+[root@ip-172-31-0-58 ~]# sudo - ec2-user
+sudo: -: command not found
+[root@ip-172-31-0-58 ~]# su - ec2-user
+Last login: Fri Apr 30 03:36:21 UTC 2021 on pts/0
+[ec2-user@ip-172-31-0-58 ~]$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+[ec2-user@ip-172-31-0-58 ~]$ git help push
+[ec2-user@ip-172-31-0-58 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-0-58 ~]$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .ssh
+[ec2-user@ip-172-31-0-58 ~]$ ls
+[ec2-user@ip-172-31-0-58 ~]$ ls
+[ec2-user@ip-172-31-0-58 ~]$ ls -la
+total 16
+drwx------. 3 ec2-user ec2-user  95 Apr 30 02:48 .
+drwxr-xr-x. 3 root     root      22 Apr 23 03:44 ..
+-rw-------. 1 ec2-user ec2-user  58 Apr 30 02:48 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user  18 Jun 23  2020 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user 141 Jun 23  2020 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user 376 Jun 23  2020 .bashrc
+drwx------. 2 ec2-user ec2-user  29 Apr 23 03:44 .ssh
+[ec2-user@ip-172-31-0-58 ~]$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs          386972       0    386972   0% /dev
+tmpfs             412576       0    412576   0% /dev/shm
+tmpfs             412576   21028    391548   6% /run
+tmpfs             412576       0    412576   0% /sys/fs/cgroup
+/dev/xvda2      10473452 2047492   8425960  20% /
+tmpfs              82512       0     82512   0% /run/user/1000
+[ec2-user@ip-172-31-0-58 ~]$ mkdir demo
+[ec2-user@ip-172-31-0-58 ~]$ cd demo
+[ec2-user@ip-172-31-0-58 demo]$ pwd
+/home/ec2-user/demo
+[ec2-user@ip-172-31-0-58 demo]$ ls -la
+total 0
+drwxrwxr-x. 2 ec2-user ec2-user   6 Apr 30 04:01 .
+drwx------. 4 ec2-user ec2-user 107 Apr 30 04:01 ..
+[ec2-user@ip-172-31-0-58 demo]$ git init
+Initialized empty Git repository in /home/ec2-user/demo/.git/
+[ec2-user@ip-172-31-0-58 demo]$ ls -la
+total 0
+drwxrwxr-x. 3 ec2-user ec2-user  18 Apr 30 04:02 .
+drwx------. 4 ec2-user ec2-user 107 Apr 30 04:01 ..
+drwxrwxr-x. 7 ec2-user ec2-user 119 Apr 30 04:02 .git
+[ec2-user@ip-172-31-0-58 demo]$ ls -l .git
+total 16
+drwxrwxr-x. 2 ec2-user ec2-user    6 Apr 30 04:02 branches
+-rw-rw-r--. 1 ec2-user ec2-user   92 Apr 30 04:02 config
+-rw-rw-r--. 1 ec2-user ec2-user   73 Apr 30 04:02 description
+-rw-rw-r--. 1 ec2-user ec2-user   23 Apr 30 04:02 HEAD
+drwxrwxr-x. 2 ec2-user ec2-user 4096 Apr 30 04:02 hooks
+drwxrwxr-x. 2 ec2-user ec2-user   21 Apr 30 04:02 info
+drwxrwxr-x. 4 ec2-user ec2-user   30 Apr 30 04:02 objects
+drwxrwxr-x. 4 ec2-user ec2-user   31 Apr 30 04:02 refs
+[ec2-user@ip-172-31-0-58 demo]$ cd ec2-user
+-bash: cd: ec2-user: No such file or directory
+[ec2-user@ip-172-31-0-58 demo]$ cd..
+-bash: cd..: command not found
+[ec2-user@ip-172-31-0-58 demo]$ cd ..
+[ec2-user@ip-172-31-0-58 ~]$ rm -rf demo
+[ec2-user@ip-172-31-0-58 ~]$ ls -la
+total 16
+drwx------. 3 ec2-user ec2-user  95 Apr 30 04:04 .
+drwxr-xr-x. 3 root     root      22 Apr 23 03:44 ..
+-rw-------. 1 ec2-user ec2-user  58 Apr 30 02:48 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user  18 Jun 23  2020 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user 141 Jun 23  2020 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user 376 Jun 23  2020 .bashrc
+drwx------. 2 ec2-user ec2-user  29 Apr 23 03:44 .ssh
+[ec2-user@ip-172-31-0-58 ~]$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .ssh
+[ec2-user@ip-172-31-0-58 ~]$ ls
+[ec2-user@ip-172-31-0-58 ~]$ git clone https://github.com/djdibyo90/devopsclass.git
+Cloning into 'devopsclass'...
+warning: You appear to have cloned an empty repository.
+[ec2-user@ip-172-31-0-58 ~]$ ls
+devopsclass
+[ec2-user@ip-172-31-0-58 ~]$ ls -l devopsclass
+total 0
+[ec2-user@ip-172-31-0-58 ~]$ ls -la devopsclass/
+total 0
+drwxrwxr-x. 3 ec2-user ec2-user  18 Apr 30 04:05 .
+drwx------. 4 ec2-user ec2-user 114 Apr 30 04:05 ..
+drwxrwxr-x. 7 ec2-user ec2-user 119 Apr 30 04:05 .git
+[ec2-user@ip-172-31-0-58 ~]$ git config --list
+[ec2-user@ip-172-31-0-58 ~]$ git config --global user.name "Dibyojyoti Chakraborty"
+[ec2-user@ip-172-31-0-58 ~]$ git config --global user.email "djdibyo90@gmail.com"
+[ec2-user@ip-172-31-0-58 ~]$ git config --list
+user.name=Dibyojyoti Chakraborty
+user.email=djdibyo90@gmail.com
+[ec2-user@ip-172-31-0-58 ~]$ ls -la
+total 20
+drwx------. 4 ec2-user ec2-user 132 Apr 30 04:12 .
+drwxr-xr-x. 3 root     root      22 Apr 23 03:44 ..
+-rw-------. 1 ec2-user ec2-user  58 Apr 30 02:48 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user  18 Jun 23  2020 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user 141 Jun 23  2020 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user 376 Jun 23  2020 .bashrc
+drwxrwxr-x. 3 ec2-user ec2-user  18 Apr 30 04:05 devopsclass
+-rw-rw-r--. 1 ec2-user ec2-user  67 Apr 30 04:12 .gitconfig
+drwx------. 2 ec2-user ec2-user  29 Apr 23 03:44 .ssh
+[ec2-user@ip-172-31-0-58 ~]$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  devopsclass  .gitconfig  .ssh
+[ec2-user@ip-172-31-0-58 ~]$ cd devopsclass/
+[ec2-user@ip-172-31-0-58 devopsclass]$ ls -l
+total 0
+[ec2-user@ip-172-31-0-58 devopsclass]$ echo "Hello World" > hello.php
+[ec2-user@ip-172-31-0-58 devopsclass]$ ls -l
+total 4
+-rw-rw-r--. 1 ec2-user ec2-user 12 Apr 30 04:17 hello.php
+[ec2-user@ip-172-31-0-58 devopsclass]$ cat hello.php
+Hello World
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+[ec2-user@ip-172-31-0-58 devopsclass]$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+[ec2-user@ip-172-31-0-58 devopsclass]$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+[ec2-user@ip-172-31-0-58 devopsclass]$ git add .
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.php
+
+[ec2-user@ip-172-31-0-58 devopsclass]$ git commit -m "Initial commit for hello.php file"
+[master (root-commit) 80e6c21] Initial commit for hello.php file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.php
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+[ec2-user@ip-172-31-0-58 devopsclass]$ git log
+commit 80e6c213a9c6ef4f649227ab50c4e335b310ebce (HEAD -> master)
+Author: Dibyojyoti Chakraborty <djdibyo90@gmail.com>
+Date:   Fri Apr 30 04:25:16 2021 +0000
+
+    Initial commit for hello.php file
+[ec2-user@ip-172-31-0-58 devopsclass]$ git show
+commit 80e6c213a9c6ef4f649227ab50c4e335b310ebce (HEAD -> master)
+Author: Dibyojyoti Chakraborty <djdibyo90@gmail.com>
+Date:   Fri Apr 30 04:25:16 2021 +0000
+
+    Initial commit for hello.php file
+
+diff --git a/hello.php b/hello.php
+new file mode 100644
+index 0000000..557db03
+--- /dev/null
++++ b/hello.php
+@@ -0,0 +1 @@
++Hello World
+[ec2-user@ip-172-31-0-58 devopsclass]$ git push
+Username for 'https://github.com': djdibyo90
+Password for 'https://djdibyo90@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/djdibyo90/devopsclass.git
+ * [new branch]      master -> master
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+[ec2-user@ip-172-31-0-58 devopsclass]$ vim hello.php
+-bash: vim: command not found
+[ec2-user@ip-172-31-0-58 devopsclass]$ sudo -i
+[root@ip-172-31-0-58 ~]# yum install vim
+Red Hat Update Infrastructure 3 Client Configuration Server 8                                                                                18 kB/s | 2.1 kB     00:00
+Red Hat Enterprise Linux 8 for x86_64 - AppStream from RHUI (RPMs)                                                                           18 kB/s | 2.8 kB     00:00
+Red Hat Enterprise Linux 8 for x86_64 - BaseOS from RHUI (RPMs)                                                                              15 kB/s | 2.4 kB     00:00
+Dependencies resolved.
+============================================================================================================================================================================
+ Package                                Architecture                   Version                                     Repository                                          Size
+============================================================================================================================================================================
+Installing:
+ vim-enhanced                           x86_64                         2:8.0.1763-15.el8                           rhel-8-appstream-rhui-rpms                         1.4 M
+Installing dependencies:
+ gpm-libs                               x86_64                         1.20.7-15.el8                               rhel-8-appstream-rhui-rpms                          39 k
+ vim-common                             x86_64                         2:8.0.1763-15.el8                           rhel-8-appstream-rhui-rpms                         6.3 M
+ vim-filesystem                         noarch                         2:8.0.1763-15.el8                           rhel-8-appstream-rhui-rpms                          48 k
+
+Transaction Summary
+============================================================================================================================================================================
+Install  4 Packages
+
+Total download size: 7.8 M
+Installed size: 30 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/4): gpm-libs-1.20.7-15.el8.x86_64.rpm                                                                                                    304 kB/s |  39 kB     00:00
+(2/4): vim-enhanced-8.0.1763-15.el8.x86_64.rpm                                                                                              8.1 MB/s | 1.4 MB     00:00
+(3/4): vim-common-8.0.1763-15.el8.x86_64.rpm                                                                                                 27 MB/s | 6.3 MB     00:00
+(4/4): vim-filesystem-8.0.1763-15.el8.noarch.rpm                                                                                            457 kB/s |  48 kB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                        28 MB/s | 7.8 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                    1/1
+  Installing       : vim-filesystem-2:8.0.1763-15.el8.noarch                                                                                                            1/4
+  Installing       : vim-common-2:8.0.1763-15.el8.x86_64                                                                                                                2/4
+  Installing       : gpm-libs-1.20.7-15.el8.x86_64                                                                                                                      3/4
+  Running scriptlet: gpm-libs-1.20.7-15.el8.x86_64                                                                                                                      3/4
+  Installing       : vim-enhanced-2:8.0.1763-15.el8.x86_64                                                                                                              4/4
+  Running scriptlet: vim-enhanced-2:8.0.1763-15.el8.x86_64                                                                                                              4/4
+  Running scriptlet: vim-common-2:8.0.1763-15.el8.x86_64                                                                                                                4/4
+  Verifying        : gpm-libs-1.20.7-15.el8.x86_64                                                                                                                      1/4
+  Verifying        : vim-enhanced-2:8.0.1763-15.el8.x86_64                                                                                                              2/4
+  Verifying        : vim-common-2:8.0.1763-15.el8.x86_64                                                                                                                3/4
+  Verifying        : vim-filesystem-2:8.0.1763-15.el8.noarch                                                                                                            4/4
+
+Installed:
+  gpm-libs-1.20.7-15.el8.x86_64       vim-common-2:8.0.1763-15.el8.x86_64       vim-enhanced-2:8.0.1763-15.el8.x86_64       vim-filesystem-2:8.0.1763-15.el8.noarch
+
+Complete!
+[root@ip-172-31-0-58 ~]# su - ec2-user
+Last login: Fri Apr 30 03:37:56 UTC 2021 on pts/0
+[ec2-user@ip-172-31-0-58 ~]$ cd devopsclass/
+[ec2-user@ip-172-31-0-58 devopsclass]$ vim hello.php
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[ec2-user@ip-172-31-0-58 devopsclass]$ git add .
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.php
+
+[ec2-user@ip-172-31-0-58 devopsclass]$ git commit origin master
+error: pathspec 'origin' did not match any file(s) known to git
+error: pathspec 'master' did not match any file(s) known to git
+[ec2-user@ip-172-31-0-58 devopsclass]$ git commit -m "New features are added"
+[master bf61023] New features are added
+ 1 file changed, 2 insertions(+)
+[ec2-user@ip-172-31-0-58 devopsclass]$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[ec2-user@ip-172-31-0-58 devopsclass]$ git push origin master
+Username for 'https://github.com': djdibyo90
+Password for 'https://djdibyo90@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/djdibyo90/devopsclass.git
+   80e6c21..bf61023  master -> master
+[ec2-user@ip-172-31-0-58 devopsclass]$ cd ..
+[ec2-user@ip-172-31-0-58 ~]$ exit
